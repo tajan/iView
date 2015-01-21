@@ -1,0 +1,155 @@
+﻿<layout>
+    <content>
+        <view iv-type="row">
+            <view iv-type="column" iv-size="12">
+
+
+                <!-- Jumborton -->
+                <jumborton iv-type="jumborton" >
+                    <h2>iView Kitchensink</h2>
+                    <p>This is iView Kitchensink project</p>
+                </jumborton>
+                
+
+                <!-- Form horizontal -->
+                <form iv-type="form" iv-formlayout="horizontal" iv-name="loginForm" iv-formtitle="Sample Horizontal Form" iv-controller="Authentication" iv-redirecturl="default">
+                        <input iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Username" />
+                        <input iv-type="password" iv-name="txtPassword" iv-model="user.password" iv-placeholder="Password" />
+                        <input iv-type="file" iv-name="file" iv-model="user.file"  />
+                        <input iv-label="Checkbox label" iv-type="checkbox" iv-name="chkBox" iv-model="user.password"  iv-checked="true" />
+                        <div class="form-group" >
+                             <div class="col-lg-12">
+                                <button iv-type="button" iv-size="large" iv-kind="primary" iv-label="Login" ></button>
+                                <button iv-type="button" iv-size="large" iv-kind="default"  iv-label="cancel" ></button>
+                            </div>
+                        </div>
+                    <result>
+                        <view iv-type="error"></view>
+                        <view iv-type="success"></view>
+                    </result>
+                    <div>This is scratch text</div>
+                    <div>This is scratch text</div>
+                </form>
+
+                 <!-- Form inline -->
+                <form iv-type="form" iv-formlayout="inline" iv-name="loginForm" iv-formtitle="Sample Inline Form" iv-controller="Authentication" iv-redirecturl="default">
+                    <fieldset>
+                        <input iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Username" />
+                        <input iv-type="password" iv-name="txtPassword" iv-model="user.password" iv-placeholder="Password" />
+                        <input iv-label="Checkbox label" iv-type="checkbox" iv-name="chkBox" iv-model="user.password"  iv-checked="true" />
+                        
+                        <div class="form-group" >
+                             <div class="col-lg-12">
+                                <button iv-type="button" iv-size="large" iv-kind="primary" iv-label="Login" ></button>
+                                <button iv-type="button" iv-size="large" iv-kind="danger"  iv-label="cancel" ></button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+
+                 <!-- Form two column -->
+                <form iv-type="form" iv-formlayout="horizontal" iv-name="loginForm" iv-formtitle="Sample Two Column Form" iv-controller="Authentication" iv-redirecturl="default">
+                    <view iv-type="column" iv-size="6">
+                        <input iv-label="Input text label"  iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Sample Input" />
+                        <input iv-label="Input password label"  iv-type="password" iv-name="txtPassword" iv-model="user.password" iv-placeholder="Sample Input" />
+                        <input iv-label="Checkbox label" iv-type="checkbox" iv-name="chkBox" iv-model="user.password"  iv-checked="true" />
+                    </view>
+                     <view iv-type="column" iv-size="6">
+                        <input iv-label=" " iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Sample Input" />
+                        <input iv-label=" " iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Sample Input" />
+                        <input iv-label=" " iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Sample Input" />
+                        <input iv-label=" " iv-type="password" iv-name="txtPassword" iv-model="user.password" iv-placeholder="Sample Input" />
+                        <input iv-label="Checkbox label" iv-type="checkbox" iv-name="chkBox" iv-model="user.password"  iv-checked="true" />
+                    </view>
+                    <view iv-type="column" iv-size="12">
+                            <button iv-type="button" iv-size="large" iv-kind="success" iv-label="Login" ></button>
+                            <button iv-type="button" iv-size="large" iv-kind="default"  iv-label="cancel" ></button>
+                    </view>
+                </form>
+                
+
+                <!-- Button -->
+                <panel iv-type="panel" iv-viewtype="default">
+                    <iv-header><h2>Button</h2></iv-header>
+                    <iv-content1>
+                        <button iv-type="button" iv-label="this is primary button" iv-size="large" iv-kind="primary"  ></button>
+                        <button iv-type="button" iv-label="this is success button" iv-size="large" iv-kind="success"  ></button>
+                        <button iv-type="button" iv-label="this is info button" iv-size="large" iv-kind="info"  ></button>
+                        <button iv-type="button" iv-label="this is warning button" iv-size="large" iv-kind="warning"  ></button>
+                        <button iv-type="button" iv-label="this is danger button" iv-size="large" iv-kind="danger"  ></button>
+                        <button iv-type="button" iv-label="this is link button" iv-size="large" iv-kind="link"  ></button>
+                    </iv-content1>
+                    <iv-footer>...</iv-footer>
+                </panel>
+
+
+                <!-- Alert -->
+                <panel iv-type="panel" iv-viewtype="default">
+                    <iv-header><h2>Alert</h2></iv-header>
+                    <iv-content1>
+                        <alert iv-type="alert" iv-alerttitle="this is alert title" iv-kind="danger"  >
+                            This is Alert Content
+                        </alert>
+                        <alert iv-type="alert" iv-alerttitle="this is alert title" iv-kind="warning"  >
+                            This is Alert Content
+                        </alert>
+                        <alert iv-type="alert" iv-alerttitle="this is alert title" iv-kind="success"  >
+                            This is Alert Content
+                        </alert>
+                        <alert iv-type="alert" iv-alerttitle="this is alert title" iv-kind="info"  >
+                            This is Alert Content
+                        </alert>
+                    </iv-content1>
+                    <iv-footer>...</iv-footer>
+                </panel>
+
+
+                <!-- Badge -->
+                <panel iv-type="panel" iv-viewtype="default">
+                    <iv-header><h2>Badge button</h2></iv-header>
+                    <iv-content1>
+                        <badge iv-label="sample badge" iv-kind="primary" iv-type="badge" iv-value="40" iv-kind="deactive" ></badge>
+                        <badge iv-label="sample badge" iv-kind="success" iv-type="badge" iv-value="40" iv-kind="active" ></badge>
+                        <badge iv-label="sample badge" iv-kind="info" iv-type="badge" iv-value="40" iv-kind="active" ></badge>
+                        <badge iv-label="sample badge" iv-kind="warning" iv-type="badge" iv-value="40" iv-kind="active" ></badge>
+                        <badge iv-label="sample badge" iv-kind="danger" iv-type="badge" iv-value="40" iv-kind="active" ></badge>
+                        <badge iv-label="sample badge" iv-kind="link" iv-type="badge" iv-value="40" iv-kind="active" ></badge>
+
+                        <badge iv-label="sample badge" iv-kind="primary" iv-type="default" iv-value="40" iv-kind="deactive" ></badge>
+                    </iv-content1>
+                    <iv-footer>...</iv-footer>
+                </panel>
+
+      
+                <!-- progress -->
+                 <panel iv-type="panel" iv-viewtype="default">
+                    <iv-header><h2>Progress</h2></iv-header>
+                    <iv-content1>
+                        <progress iv-type="progress" iv-value="20" iv-kind="success" ></progress>
+                        <progress iv-type="progress" iv-value="50" iv-kind="info" ></progress>
+                        <progress iv-type="progress" iv-value="30" iv-kind="warning" ></progress>
+                        <progress iv-type="progress" iv-value="70" iv-kind="danger" ></progress>
+                    </iv-content1>
+                    <iv-footer>...</iv-footer>
+                </panel>
+
+                
+            </view>
+        </view>
+    </content>
+</layout>
+<definition>
+    <models>
+        <model name="User">
+            <property name="Username" type="string"></property>
+            <property name="Password" type="string"></property>
+        </model>
+        <model name="AuthenticationResult" response="true">
+        </model>
+    </models>
+    <controllers>
+        <controller name="Authentication" requestmodel="User" responsemodel="AuthenticationResult">
+        </controller>
+    </controllers>
+</definition>

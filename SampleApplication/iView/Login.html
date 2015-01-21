@@ -1,0 +1,42 @@
+﻿<layout>
+    <content>
+        <view iv-type="row">
+            <view iv-type="column" iv-size="4">
+                <panel iv-type="panel" iv-viewtype="default">
+                    <iv-content1>This is Content 1</iv-content1>
+                    <iv-footer>This is panel footer1.</iv-footer>
+                    <iv-header>This is panel header.</iv-header>
+                    <iv-footer>This is panel footer2.</iv-footer>
+                    <iv-content1>This is panel content2.</iv-content1>
+                </panel>
+                <form iv-type="form" iv-name="loginForm" iv-formtitle="Please Sign In" iv-controller="Authentication" iv-redirecturl="default">
+                    <div>amir 1</div>
+                    <fieldset>
+                        <input iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Username" />
+                        <input iv-type="password" iv-name="txtPassword" iv-model="user.password" iv-placeholder="Password" />
+                        <button iv-type="submit" iv-name="btnSubmit" iv-label="Login" />
+                    </fieldset>
+                    <result>
+                        <view iv-type="error"></view>
+                        <view iv-type="success"></view>
+                    </result>
+                    <div>amir 2</div>
+                </form>
+            </view>
+        </view>
+    </content>
+</layout>
+<definition>
+    <models>
+        <model name="User">
+            <property name="Username" type="string"></property>
+            <property name="Password" type="string"></property>
+        </model>
+        <model name="AuthenticationResult" response="true">
+        </model>
+    </models>
+    <controllers>
+        <controller name="Authentication" requestmodel="User" responsemodel="AuthenticationResult">
+        </controller>
+    </controllers>
+</definition>

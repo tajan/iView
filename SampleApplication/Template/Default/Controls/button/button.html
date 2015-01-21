@@ -1,0 +1,21 @@
+﻿<document>
+    <attr name="iv-label"></attr>
+    <attr name="iv-kind">
+        <value>default</value>
+        <value>primary</value>
+        <value>success</value>
+        <value>info</value>
+        <value>warning</value>
+        <value>danger</value>
+        <value>link</value>
+    </attr>
+    <attr name="iv-size">
+        <value>default</value>
+        <value>mini</value>
+        <value>small</value>
+        <value>large</value>
+    </attr>
+</document>
+<control>
+    <button type="submit" class="btn btn-$iv-kind btn-$iv-size $iv-class" ng-click="formsubmit()">$iv-label</button>
+</control>

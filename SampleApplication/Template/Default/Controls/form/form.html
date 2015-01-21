@@ -1,0 +1,49 @@
+﻿<document>
+    <attr name="iv-action"></attr>
+    <attr name="iv-method"></attr>
+    <attr name="iv-formlayout">
+        <value>horizontal</value>
+        <value>verical</value>
+        <value>inline</value>
+    </attr>
+</document>
+<control>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">$iv-formtitle</h3>
+        </div>
+        <div class="panel-body" ng-controller="$iv-controller" onsubmit="return false;">
+            <form name="$iv-name" class="form-$iv-formlayout">
+                <iv-content></iv-content>
+            </form>
+        </div>
+    </div>
+    <script>
+        function $iv-controller($scope, $location, $window, $http) {
+            $scope.isFormSubmitted = false;
+            $scope.formsubmit = function () {
+                $http.post(rootUrl + "$iv-controller", $scope.user).
+                success(function (data, status, headers, config) {
+                    $scope.isFormSubmitted = true;
+                    $scope.data = data;
+                    if (data.HasError)
+                    {
+                        $scope.error = data.Error;
+                    }
+                    else
+                    {
+                        $scope.showError = false;
+                        if ("$iv-redirecturl" != ""){
+                            $window.location = "$iv-redirecturl";
+                        }
+                    }
+                }).
+                error(function (data, status, headers, config) {
+                    $scope.isFormSubmitted = true;
+                    $scope.data = data;
+                    $scope.error = "Server error!";
+                });
+            };
+        }
+    </script>
+</control>
