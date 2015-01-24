@@ -6,4 +6,5 @@
     <resource iv-name="testjs" iv-type="js" iv-source="/Content/JavaScript1.js"></resource>
     <resource iv-name="csstest" iv-type="css" iv-source="/content/StyleSheet1.css"></resource>
   </resources>
+  <yes></yes>
 </root>
