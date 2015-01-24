@@ -6,6 +6,7 @@
 #Region " Manifest "
 
     Public Const MANIFEST_FILE_VIRTUAL_PATH As String = "~/manifest.xml"
+    Public Const MANIFEST_ATTRIBUTE_DEBUG As String = "debug"
     Public Const TRUE_VALUE As String = "true"
 #End Region
 

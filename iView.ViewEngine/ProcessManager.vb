@@ -1,4 +1,5 @@
 ﻿Imports HtmlAgilityPack
+Imports System.Web
 
 Public Class ProcessManager
 
@@ -6,6 +7,7 @@ Public Class ProcessManager
 
     Private Shared Processors As New List(Of IProcessor)
     Private Shared ControlProcessors As New List(Of IControlProcessor)
+    Private Shared cache As New Dictionary(Of String, String)
 
     Public Shared Sub RegisterProcessor(process As IProcessor)
         SyncLock _locker
@@ -67,7 +69,7 @@ Public Class ProcessManager
 
     End Function
 
-    Public Shared Function ProcessView(htmlContent As String) As String
+    Friend Shared Function ProcessViewContent(htmlContent As String) As String
 
         Dim out As String = htmlContent
 
@@ -76,6 +78,29 @@ Public Class ProcessManager
         out = PostProcess(out)
 
         Return out
+
+    End Function
+
+    Public Shared Function ProcessView(virtualFilePath As String) As String
+
+        If ManifestHelper.GetManifest.Debug Then
+
+            Dim physicalPath As String = VirtualPathUtility.ToAppRelative(virtualFilePath)
+            Return ProcessManager.ProcessViewContent(Helper.GetVirtualFileContent(virtualFilePath))
+
+        Else
+
+            If Not cache.ContainsKey(virtualFilePath) Then
+                SyncLock _locker
+                    If Not cache.ContainsKey(virtualFilePath) Then
+                        cache.Item(virtualFilePath) = ProcessManager.ProcessViewContent(Helper.GetVirtualFileContent(virtualFilePath))
+                    End If
+                End SyncLock
+            End If
+
+            Return cache.Item(virtualFilePath)
+
+        End If
 
     End Function
 

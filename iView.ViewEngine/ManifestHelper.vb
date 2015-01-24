@@ -2,6 +2,7 @@
 
 Public Class ManifestHelper
 
+    'todo: implement caching
     Public Shared Function GetManifest() As Manifest
 
         Dim manifest As New Manifest
@@ -12,6 +13,14 @@ Public Class ManifestHelper
 
         Dim manifestFileContent As String = Helper.GetVirtualFileContent(MANIFEST_FILE_VIRTUAL_PATH)
         Dim manifestNode As HtmlNode = Helper.GetHtmlNode(manifestFileContent)
+
+        If manifestNode.ChildNodes("root") Is Nothing Then
+            Throw New Exception("root node does not exist in manifest file.")
+        End If
+
+        If manifestNode.ChildNodes("root").Attributes.Contains(MANIFEST_ATTRIBUTE_DEBUG) Then
+            manifest.Debug = Boolean.Parse(manifestNode.ChildNodes("root").Attributes.Item(MANIFEST_ATTRIBUTE_DEBUG).Value)
+        End If
 
         LoadLayout(manifest, manifestNode)
         LoadControl(manifest, manifestNode)

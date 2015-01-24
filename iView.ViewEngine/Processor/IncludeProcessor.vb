@@ -23,10 +23,8 @@ Public Class IncludeProcessor
                 Throw New Exception("IncludePreProcessor - PreProcess, Include file does not found! File path: " & includeFileVirtualPath)
             End If
 
-            Dim includeHtmlContent As String = Helper.GetVirtualFileContent(includeFileVirtualPath)
-
             'process include file content
-            includeHtmlContent = ProcessManager.ProcessView(includeHtmlContent)
+            Dim includeHtmlContent As String = ProcessManager.ProcessView(includeFileVirtualPath)
 
             'replace include content with include node in view
             Dim includeInSourceNode As HtmlNode = Helper.GetHtmlNode(includeHtmlContent)
