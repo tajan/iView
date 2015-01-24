@@ -1,5 +1,19 @@
 ﻿<layout>
     <content>
+
+
+        <!-- Navbar -->
+        <navbar iv-type="navbar" iv-position="top" >
+            <iv-content1>
+                <h3>iView</h3>
+            </iv-content1>
+        </navbar>
+
+
+        <!-- Spacer -->
+        <view iv-type="spacer" iv-height="70px" ></view>
+
+
         <view iv-type="row">
             <view iv-type="column" iv-size="12">
 
@@ -24,12 +38,11 @@
                             </div>
                         </div>
                     <result>
-                        <view iv-type="error"></view>
-                        <view iv-type="success"></view>
+                        <alert iv-kind="error"></alert>
+                        <alert iv-kind="success"></alert>
                     </result>
-                    <div>This is scratch text</div>
-                    <div>This is scratch text</div>
                 </form>
+
 
                  <!-- Form inline -->
                 <form iv-type="form" iv-formlayout="inline" iv-name="loginForm" iv-formtitle="Sample Inline Form" iv-controller="Authentication" iv-redirecturl="default">
@@ -104,6 +117,19 @@
                     <iv-footer>...</iv-footer>
                 </panel>
 
+                <!-- Wells -->
+                <panel iv-type="panel" iv-viewtype="default">
+                    <iv-header><h2>Well</h2></iv-header>
+                    <iv-content1>
+                        <well iv-type="well" iv-size="lg">
+                            Vel magna, augue dis ut, scelerisque. Velit magnis dictumst scelerisque? Pellentesque? Adipiscing. In non turpis pid sit, eu? Scelerisque tempor! Dignissim pid diam tempor et, natoque! Vel, mattis montes montes, est nec cursus tortor? Nascetur habitasse! Cursus placerat est rhoncus. Tincidunt hac dapibus lorem penatibus porttitor in! Est? Ac dapibus mid velit in non augue sociis mattis lacus scelerisque duis placerat sit mus. Vel magna, augue dis ut, scelerisque. Velit magnis dictumst scelerisque? Pellentesque? Adipiscing. In non turpis pid sit, eu? Scelerisque tempor! Dignissim pid diam tempor et, natoque! Vel, mattis montes montes, est nec cursus tortor? Nascetur habitasse! Cursus placerat est rhoncus. Tincidunt hac dapibus lorem penatibus porttitor in! Est? Ac dapibus mid velit in non augue sociis mattis lacus scelerisque duis placerat sit mus. 
+                        </well>
+                        <well iv-type="well" iv-size="sm">
+                            Vel magna, augue dis ut, scelerisque. Velit magnis dictumst scelerisque? Pellentesque? Adipiscing. In non turpis pid sit, eu? Scelerisque tempor! Dignissim pid diam tempor et, natoque! Vel, mattis montes montes, est nec cursus tortor? Nascetur habitasse! Cursus placerat est rhoncus. Tincidunt hac dapibus lorem penatibus porttitor in! Est? Ac dapibus mid velit in non augue sociis mattis lacus scelerisque duis placerat sit mus. Vel magna, augue dis ut, scelerisque. Velit magnis dictumst scelerisque? Pellentesque? Adipiscing. In non turpis pid sit, eu? Scelerisque tempor! Dignissim pid diam tempor et, natoque! Vel, mattis montes montes, est nec cursus tortor? Nascetur habitasse! Cursus placerat est rhoncus. Tincidunt hac dapibus lorem penatibus porttitor in! Est? Ac dapibus mid velit in non augue sociis mattis lacus scelerisque duis placerat sit mus.
+                        </well>
+                    </iv-content1>
+                </panel>
+
 
                 <!-- Badge -->
                 <panel iv-type="panel" iv-viewtype="default">
@@ -126,10 +152,17 @@
                  <panel iv-type="panel" iv-viewtype="default">
                     <iv-header><h2>Progress</h2></iv-header>
                     <iv-content1>
-                        <progress iv-type="progress" iv-value="20" iv-kind="success" ></progress>
-                        <progress iv-type="progress" iv-value="50" iv-kind="info" ></progress>
+                        <progress iv-type="progress" iv-value="10" iv-kind="success" ></progress>
+                        <progress iv-type="progress" iv-value="20" iv-kind="info" ></progress>
                         <progress iv-type="progress" iv-value="30" iv-kind="warning" ></progress>
-                        <progress iv-type="progress" iv-value="70" iv-kind="danger" ></progress>
+                        <progress iv-type="progress" iv-value="40" iv-kind="danger" ></progress>
+
+                        <progress iv-type="progress" iv-value="50" iv-striped="striped" iv-kind="success" ></progress>
+                        <progress iv-type="progress" iv-value="60" iv-striped="striped" iv-kind="info" ></progress>
+                        <progress iv-type="progress" iv-value="70" iv-striped="striped" iv-kind="warning" ></progress>
+                        <progress iv-type="progress" iv-value="80" iv-striped="striped" iv-kind="danger" ></progress>
+
+                        <progress iv-type="progress" iv-value="80" iv-striped="striped" iv-kind="success" iv-animate="active" ></progress>
                     </iv-content1>
                     <iv-footer>...</iv-footer>
                 </panel>

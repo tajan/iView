@@ -6,9 +6,16 @@
         <value>warning</value>
         <value>danger</value>
     </attr>
+    <attr name="iv-striped" >
+        <value>striped</value>
+    </attr>
+    <attr name="iv-animate" >
+        <value>active</value>
+    </attr>
+
 </document>
 <control>
     <div class="progress">
-        <div class="progress-bar progress-bar-$iv-kind" style="width: $iv-value%;"></div>
+        <div class="progress-bar progress-bar-$iv-kind progress-bar-$iv-striped $iv-animate" style="width: $iv-value%;"></div>
     </div>
 </control>

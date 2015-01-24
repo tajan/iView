@@ -87,8 +87,6 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\lib\bootstrap\css\bootstrap.css" />
-    <Content Include="Content\lib\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\lib\angular\angular-animate.js" />
     <Content Include="Content\lib\angular\angular-animate.min.js" />
     <Content Include="Content\lib\angular\angular-aria.js" />
@@ -112,8 +110,6 @@
     <Content Include="Content\lib\angular\angular-touch.min.js" />
     <Content Include="Content\lib\angular\angular.js" />
     <Content Include="Content\lib\angular\angular.min.js" />
-    <Content Include="Content\lib\bootstrap\js\bootstrap.js" />
-    <Content Include="Content\lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\lib\angular\i18n\angular-locale_aa-dj.js" />
     <Content Include="Content\lib\angular\i18n\angular-locale_aa-er.js" />
     <Content Include="Content\lib\angular\i18n\angular-locale_aa-et.js" />
@@ -857,7 +853,21 @@
     <Content Include="Content\lib\angular\i18n\angular-locale_zh.js" />
     <Content Include="Content\lib\angular\i18n\angular-locale_zu-za.js" />
     <Content Include="Content\lib\angular\i18n\angular-locale_zu.js" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Content\lib\jquery\jquery-2.1.1.intellisense.js" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\lib\bootstrap\js\npm.js" />
     <Content Include="Content\lib\jquery\jquery-2.1.1.js" />
     <Content Include="Content\lib\jquery\jquery-2.1.1.min.js" />
     <Content Include="Content\Scripts\npm.js" />
@@ -878,13 +888,14 @@
     <Content Include="Template\Default\Controls\jumborton\jumborton.html" />
     <Content Include="Template\Default\Controls\labeledinput\password.html" />
     <Content Include="Template\Default\Controls\labeledinput\text.html" />
+    <Content Include="Template\Default\Controls\navbar\navbar.html" />
     <Content Include="Template\Default\Controls\progress\progress.html" />
     <Content Include="Template\Default\Controls\select\select.html" />
     <Content Include="Template\Default\Controls\panel\panel.html" />
+    <Content Include="Template\Default\Controls\view\spacer.html" />
     <Content Include="Template\Default\Controls\view\column.html" />
-    <Content Include="Template\Default\Controls\view\error.html" />
     <Content Include="Template\Default\Controls\view\row.html" />
-    <Content Include="Template\Default\Controls\view\success.html" />
+    <Content Include="Template\Default\Controls\well\well.html" />
     <Content Include="Template\Default\Layout\Bootstrap.html" />
     <Content Include="Template\Default\Layout\Default.html" />
     <Content Include="Template\Default\Layout\DefaultWithoutMenu.html" />
