@@ -33,6 +33,7 @@ Public Class iViewHttpModule
                     ProcessManager.RegisterProcessor(New LayoutProcessor)
                     ProcessManager.RegisterProcessor(New ControlProcessor)
                     ProcessManager.RegisterProcessor(New ControlTagRemoverProcessor)
+                    ProcessManager.RegisterProcessor(New ResourceProcessor)
 
                     ProcessManager.RegisterControlProcessor(New AttributeBinderProcessor)
                     ProcessManager.RegisterControlProcessor(New ContentBinderProcessor)

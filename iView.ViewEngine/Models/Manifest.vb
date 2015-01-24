@@ -2,7 +2,7 @@
 
     Public Property Layout As Layout
     Public Property Control As Control
-
+    Public Property Resources As New Dictionary(Of String, Resource)
     Public Property Debug As Boolean
 
     Public Sub New()

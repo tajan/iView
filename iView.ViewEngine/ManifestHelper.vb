@@ -24,6 +24,7 @@ Public Class ManifestHelper
 
         LoadLayout(manifest, manifestNode)
         LoadControl(manifest, manifestNode)
+        LoadResources(manifest, manifestNode)
 
         Return manifest
 
@@ -63,6 +64,43 @@ Public Class ManifestHelper
             .Control.ControlsPath = controlNode.GetAttributeValue(CONTROL_TAG_PATH_ATTRIBUTE, .Control.ControlsPath)
 
         End With
+
+    End Sub
+
+    Private Shared Sub LoadResources(manifest As Manifest, manifestNode As HtmlNode)
+
+        Dim resourceNodes As HtmlNodeCollection = manifestNode.SelectNodes("//resources/resource")
+
+        If resourceNodes Is Nothing Then
+            Exit Sub
+        End If
+
+        For Each resourceNode In resourceNodes
+
+            Dim resource As New Resource
+            resource.Name = resourceNode.GetAttributeValue("iv-name", resource.Name)
+            resource.Type = resourceNode.GetAttributeValue("iv-type", resource.Type)
+            resource.Source = resourceNode.GetAttributeValue("iv-source", resource.Source)
+
+            If resource.Name Is Nothing Then
+                Throw New Exception("The resource node in manifest file should contains an iv-name attribute.")
+            End If
+
+            If resource.Type Is Nothing Then
+                Throw New Exception("The resource node in manifest file should contains an iv-type attribute.")
+            End If
+
+            If resource.Source Is Nothing Then
+                Throw New Exception("The resource node in manifest file should contains an iv-source attribute.")
+            End If
+
+            If manifest.Resources.ContainsKey(resource.Name) Then
+                Throw New Exception("Multiple resource node in manifest file with the same name:" & resource.Name)
+            End If
+
+            manifest.Resources.Add(resource.Name, resource)
+
+        Next
 
     End Sub
 
