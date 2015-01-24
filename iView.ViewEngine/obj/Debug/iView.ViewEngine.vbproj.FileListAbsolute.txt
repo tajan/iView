@@ -22,3 +22,15 @@ D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.vbproj.Generate
 D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.dll
 D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.xml
 D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.pdb
+C:\Data\Github\iView\iView.ViewEngine\bin\Debug\iView.ViewEngine.dll
+C:\Data\Github\iView\iView.ViewEngine\bin\Debug\iView.ViewEngine.pdb
+C:\Data\Github\iView\iView.ViewEngine\bin\Debug\iView.ViewEngine.xml
+C:\Data\Github\iView\iView.ViewEngine\bin\Debug\HtmlAgilityPack.dll
+C:\Data\Github\iView\iView.ViewEngine\bin\Debug\HtmlAgilityPack.pdb
+C:\Data\Github\iView\iView.ViewEngine\bin\Debug\HtmlAgilityPack.xml
+C:\Data\Github\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.vbprojResolveAssemblyReference.cache
+C:\Data\Github\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.Resources.resources
+C:\Data\Github\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.vbproj.GenerateResource.Cache
+C:\Data\Github\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.dll
+C:\Data\Github\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.xml
+C:\Data\Github\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.pdb
