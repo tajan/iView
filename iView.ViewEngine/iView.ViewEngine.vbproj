@@ -71,6 +71,7 @@
     <Compile Include="Models\Control.vb" />
     <Compile Include="Models\Layout.vb" />
     <Compile Include="Models\Manifest.vb" />
+    <Compile Include="Models\Resource.vb" />
     <Compile Include="Processor\ControlProcessor\AttributeBinderProcessor.vb" />
     <Compile Include="Processor\BaseProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\BaseControlProcessor.vb" />
@@ -101,6 +102,7 @@
     <Compile Include="Processor\LayoutProcessor.vb" />
     <Compile Include="Processor\ControlProcessor.vb" />
     <Compile Include="Processor\IProcessor.vb" />
+    <Compile Include="Processor\ResourceProcessor.vb" />
     <Compile Include="Registration\iViewFile.vb" />
     <Compile Include="Registration\iViewHttpModule.vb" />
     <Compile Include="Registration\iViewResourceProvider.vb" />
