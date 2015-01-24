@@ -1,17 +1,22 @@
 ﻿<document>
     <attr name="iv-action"></attr>
     <attr name="iv-method"></attr>
+    <attr name="iv-controller"></attr>
     <attr name="iv-formlayout">
-        <value>horizontal</value>
-        <value>verical</value>
-        <value>inline</value>
+        <value name="horizontal" default="true" >horizontal</value>
+        <value name="vertical" >verical</value>
+        <value name="inline" >inline</value>
     </attr>
 </document>
+
 <control>
     <div class="panel panel-primary">
+
+        <!-- if $iv-formtitle -->
         <div class="panel-heading">
             <h3 class="panel-title">$iv-formtitle</h3>
         </div>
+        <!-- end -->
         <div class="panel-body" ng-controller="$iv-controller" onsubmit="return false;">
             <form name="$iv-name" class="form-$iv-formlayout">
                 <iv-content></iv-content>
@@ -19,7 +24,8 @@
         </div>
     </div>
     <script>
-        function $iv-controller($scope, $location, $window, $http) {
+        function 
+        $iv-controller($scope, $location, $window, $http) {
             $scope.isFormSubmitted = false;
             $scope.formsubmit = function () {
                 $http.post(rootUrl + "$iv-controller", $scope.user).

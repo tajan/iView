@@ -1,16 +1,17 @@
 ﻿<document>
-    <attr name="iv-alerttitle"></attr>
+    <attr name="iv-alert-title"></attr>
     <attr name="iv-kind">
-        <value>danger</value>
-        <value>warning</value>
-        <value>success</value>
-        <value>info</value>
+        <value default="true"  name="danger" >danger</value>
+        <value name="warning" >warning</value>
+        <value name="success" >success</value>
+        <value name="info" >info</value>
     </attr>
 </document>
 <control>
     <div class="alert alert-dismissable alert-$iv-kind">
-        <button type="button" class="close" data-dismiss="alert"></button>
-        <h4>$iv-alerttitle</h4>
+        <!-- if $iv-alert-title -->
+        <h4>$iv-alert-title</h4>
+        <!-- end -->
         <iv-content></iv-content>
     </div>
 </control>
