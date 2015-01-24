@@ -3,29 +3,28 @@
 Public Class ResourceProcessor
     Implements IProcessor
 
-    'todo: 
     Public Function PostProcess(content As String) As String Implements IProcessor.PostProcess
 
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-        Dim resourceNodes = htmlNode.Descendants("resource")
+        Dim resourceNodes As HtmlNodeCollection = htmlNode.SelectNodes(RESOURCE_TAG_XPATH_FILTER)
 
         If resourceNodes Is Nothing OrElse resourceNodes.Count = 0 Then
             Return content
         End If
 
         Dim manifest As Manifest = ManifestHelper.GetManifest
-        Dim headNodes = htmlNode.Descendants("head")
+        Dim headNode As HtmlNode = htmlNode.SelectSingleNode(HEAD_TAG_XPATH_FILTER)
 
-        If headNodes Is Nothing OrElse headNodes.Count = 0 Then
+        If headNode Is Nothing Then
             Throw New Exception("There is not head node in html content to add resource in.")
         End If
 
-        Dim headNode = headNodes(0)
         Dim resourceNodesToBeAdded As New Dictionary(Of String, Resource)
 
+        'add resource objects to dictionary to avoid duplicate resources
         For Each resourceNode In resourceNodes
 
-            Dim name As String = resourceNode.Attributes("iv-name").Value
+            Dim name As String = resourceNode.Attributes(RESOURCE_TAG_NAME_ATTRIBUTE).Value
 
             If Not manifest.Resources.ContainsKey(name) Then
                 Throw New Exception("Resource " & name & " does not exists in manifest file.")
@@ -37,7 +36,12 @@ Public Class ResourceProcessor
 
         Next
 
+        'remove resource nodes from content
+        For i As Integer = 0 To resourceNodes.Count - 1
+            resourceNodes(i).Remove()
+        Next
 
+        'add resources to head node
         For Each resource In resourceNodesToBeAdded.Values
 
             Dim newNode As HtmlNode = Nothing
@@ -62,8 +66,9 @@ Public Class ResourceProcessor
 
         Next
 
+
         Return htmlNode.OuterHtml
-       
+
     End Function
 
     Public Function PreProcess(content As String) As String Implements IProcessor.PreProcess

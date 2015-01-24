@@ -8,8 +8,12 @@
     Public Const MANIFEST_FILE_VIRTUAL_PATH As String = "~/manifest.xml"
     Public Const MANIFEST_ATTRIBUTE_DEBUG As String = "debug"
     Public Const TRUE_VALUE As String = "true"
-#End Region
+    Public Const ROOT_TAG As String = "root"
+    Public Const RESOURCES_TAG As String = "resources"
+    Public Const RESOURCES_TAG_XPATH_FILTER As String = "//" & RESOURCES_TAG & "/" & RESOURCE_TAG
+    Public Const RESOURCE_TAG As String = "resource"
 
+#End Region
 
 #Region " Layout "
 
@@ -21,7 +25,6 @@
     Public Const LAYOUT_TAG_XPATH_FILTER As String = "//" & LAYOUT_TAG
    
 #End Region
-
 
 #Region " Include "
 
@@ -43,6 +46,18 @@
     Public Const CONTROL_TAG_CONTENT_TAG As String = "iv-content"
 
 #End Region
-    
+
+#Region " Resource "
+
+
+
+    Public Const HEAD_TAG As String = "head"
+    Public Const RESOURCE_TAG_XPATH_FILTER As String = "//" & RESOURCE_TAG & "[@" & RESOURCE_TAG_NAME_ATTRIBUTE & "]"
+    Public Const HEAD_TAG_XPATH_FILTER As String = "//" & HEAD_TAG
+    Public Const RESOURCE_TAG_NAME_ATTRIBUTE As String = IV_ATTRIBUTE_PREFIX & "name"
+    Public Const RESOURCE_TAG_SOURCE_ATTRIBUTE As String = IV_ATTRIBUTE_PREFIX & "source"
+    Public Const RESOURCE_TAG_TYPE_ATTRIBUTE As String = IV_ATTRIBUTE_PREFIX & "type"
+
+#End Region
 
 End Module

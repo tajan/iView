@@ -14,12 +14,12 @@ Public Class ManifestHelper
         Dim manifestFileContent As String = Helper.GetVirtualFileContent(MANIFEST_FILE_VIRTUAL_PATH)
         Dim manifestNode As HtmlNode = Helper.GetHtmlNode(manifestFileContent)
 
-        If manifestNode.ChildNodes("root") Is Nothing Then
+        If manifestNode.ChildNodes(ROOT_TAG) Is Nothing Then
             Throw New Exception("root node does not exist in manifest file.")
         End If
 
-        If manifestNode.ChildNodes("root").Attributes.Contains(MANIFEST_ATTRIBUTE_DEBUG) Then
-            manifest.Debug = Boolean.Parse(manifestNode.ChildNodes("root").Attributes.Item(MANIFEST_ATTRIBUTE_DEBUG).Value)
+        If manifestNode.ChildNodes(ROOT_TAG).Attributes.Contains(MANIFEST_ATTRIBUTE_DEBUG) Then
+            manifest.Debug = Boolean.Parse(manifestNode.ChildNodes(ROOT_TAG).Attributes.Item(MANIFEST_ATTRIBUTE_DEBUG).Value)
         End If
 
         LoadLayout(manifest, manifestNode)
@@ -69,7 +69,7 @@ Public Class ManifestHelper
 
     Private Shared Sub LoadResources(manifest As Manifest, manifestNode As HtmlNode)
 
-        Dim resourceNodes As HtmlNodeCollection = manifestNode.SelectNodes("//resources/resource")
+        Dim resourceNodes As HtmlNodeCollection = manifestNode.SelectNodes(RESOURCES_TAG_XPATH_FILTER)
 
         If resourceNodes Is Nothing Then
             Exit Sub
@@ -78,9 +78,9 @@ Public Class ManifestHelper
         For Each resourceNode In resourceNodes
 
             Dim resource As New Resource
-            resource.Name = resourceNode.GetAttributeValue("iv-name", resource.Name)
-            resource.Type = resourceNode.GetAttributeValue("iv-type", resource.Type)
-            resource.Source = resourceNode.GetAttributeValue("iv-source", resource.Source)
+            resource.Name = resourceNode.GetAttributeValue(RESOURCE_TAG_NAME_ATTRIBUTE, resource.Name)
+            resource.Type = resourceNode.GetAttributeValue(RESOURCE_TAG_TYPE_ATTRIBUTE, resource.Type)
+            resource.Source = resourceNode.GetAttributeValue(RESOURCE_TAG_SOURCE_ATTRIBUTE, resource.Source)
 
             If resource.Name Is Nothing Then
                 Throw New Exception("The resource node in manifest file should contains an iv-name attribute.")
