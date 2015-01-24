@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<root>
+<root debug="false">
   <layout iv-root="~/Template" iv-theme="default" iv-layout="layout" iv-source="DefaultWithoutMenu.html" />
   <control iv-root="~/Template" iv-theme="default" iv-controls="controls" />
 </root>
