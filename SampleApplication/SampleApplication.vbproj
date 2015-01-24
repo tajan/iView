@@ -880,6 +880,7 @@
     <Content Include="Template\Default\Controls\badge\default.html" />
     <Content Include="Template\Default\Controls\button\button.html" />
     <Content Include="Template\Default\Controls\button\submit.html" />
+    <Content Include="Template\Default\Controls\checkbox\checkbox.html" />
     <Content Include="Template\Default\Controls\form\form.html" />
     <Content Include="Template\Default\Controls\input\checkbox.html" />
     <Content Include="Template\Default\Controls\input\file.html" />
