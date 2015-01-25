@@ -5,10 +5,9 @@ Public Class ComplexAttributeProcessor
 
     Protected Overrides Function ProcessControlNode(viewControlNode As HtmlNode, sourceControlNode As HtmlNode) As String
 
-        Dim attributes = viewControlNode.Attributes.Where(Function(x) x.Name.StartsWith(IV_ATTRIBUTE_PREFIX)).ToList
         Dim out As String = sourceControlNode.OuterHtml
 
-        For Each attribute In attributes
+        For Each attribute In sourceControlNode.Attributes
             out = out.Replace(CONTROL_TAG_ATTRIBUTE_PREFIX & attribute.Name, attribute.Value)
         Next
 

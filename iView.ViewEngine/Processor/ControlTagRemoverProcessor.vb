@@ -12,9 +12,9 @@ Public Class ControlTagRemoverProcessor
             Return content
         End If
 
-        For Each x In controlNodes.ToList
-            x.ParentNode.RemoveChild(x, True)
-        Next
+        'For Each x In controlNodes.ToList
+        '    x.ParentNode.RemoveChild(x, True)
+        'Next
         Return htmlNode.OuterHtml
     End Function
 
