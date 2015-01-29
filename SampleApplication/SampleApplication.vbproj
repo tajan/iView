@@ -871,6 +871,7 @@
     <Content Include="Content\lib\jquery\jquery-2.1.1.js" />
     <Content Include="Content\lib\jquery\jquery-2.1.1.min.js" />
     <Content Include="Content\Scripts\npm.js" />
+    <Content Include="iView\Alert.html" />
     <Content Include="iView\kitchensink.html" />
     <Content Include="iView\panel2.html" />
     <Content Include="iView\panel1.html" />

@@ -1,8 +1,11 @@
-﻿<layout>
+﻿<layout iv-source="default.html">
     <content>
+        <include iv-source="~/Template/Default/Layout/Scripts.html"></include>
+
         <form iv-type="form" iv-name="loginForm" iv-formtitle="Please Sign In" iv-controller="Authentication">
             <div>amir 1</div>
             <fieldset>
+                <include iv-source="~/Template/Default/Layout/Scripts.html"></include>
                 <input iv-type="text" iv-name="txtUsername" iv-model="user.username" iv-placeholder="Username" />
                 <input iv-type="password" iv-name="txtPassword" iv-model="user.password" iv-placeholder="Password" />
                 <button iv-type="submit" iv-name="btnSubmit" iv-label="Login" />
@@ -15,17 +18,3 @@
         </form>
     </content>
 </layout>
-<definition>
-    <models>
-        <model name="User">
-            <property name="Username" type="string"></property>
-            <property name="Password" type="string"></property>
-        </model>
-        <model name="AuthenticationResult" response="true">
-        </model>
-    </models>
-    <controllers>
-        <controller name="Authentication" requestmodel="User" responsemodel="AuthenticationResult">
-        </controller>
-    </controllers>
-</definition>
