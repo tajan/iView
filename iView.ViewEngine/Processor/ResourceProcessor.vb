@@ -5,18 +5,21 @@ Public Class ResourceProcessor
 
     Public Function PostProcess(content As String) As String Implements IProcessor.PostProcess
 
+        Dim manifest As Manifest = ManifestProvider.Manifest
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-        Dim resourceNodes As HtmlNodeCollection = htmlNode.SelectNodes(RESOURCE_TAG_XPATH_FILTER)
+
+        'finding resource nodes in view
+        Dim resourceNodes As HtmlNodeCollection = htmlNode.SelectNodes("//" & manifest.ResourceTagName & "[@" & manifest.ResourceNameAttributeName & "]")
 
         If resourceNodes Is Nothing OrElse resourceNodes.Count = 0 Then
             Return content
         End If
 
-        Dim manifest As Manifest = ManifestHelper.GetManifest
-        Dim headNode As HtmlNode = htmlNode.SelectSingleNode(HEAD_TAG_XPATH_FILTER)
+        'finding head element in html content to add js, css,... nodes
+        Dim headNode As HtmlNode = htmlNode.SelectSingleNode("//head")
 
         If headNode Is Nothing Then
-            Throw New Exception("There is not head node in html content to add resource in.")
+            headNode = htmlNode
         End If
 
         Dim resourceNodesToBeAdded As New Dictionary(Of String, Resource)
@@ -24,7 +27,7 @@ Public Class ResourceProcessor
         'add resource objects to dictionary to avoid duplicate resources
         For Each resourceNode In resourceNodes
 
-            Dim name As String = resourceNode.Attributes(RESOURCE_TAG_NAME_ATTRIBUTE).Value
+            Dim name As String = resourceNode.Attributes(ManifestProvider.Manifest.ResourceNameAttributeName).Value
 
             If Not manifest.Resources.ContainsKey(name) Then
                 Throw New Exception("Resource " & name & " does not exists in manifest file.")

@@ -9,7 +9,7 @@ Public Class LayoutProcessor
 
         'find first layout node
         'each view file contains only 1 layout (inheritance)
-        Dim layoutViewNode As HtmlNode = htmlNode.SelectSingleNode(LAYOUT_TAG)
+        Dim layoutViewNode As HtmlNode = htmlNode.SelectSingleNode(ManifestProvider.Manifest.LayoutTagName)
 
         'if there is no layout node, there is no need to process the node
         If layoutViewNode Is Nothing OrElse layoutViewNode.ChildNodes.Count = 0 Then
@@ -17,7 +17,7 @@ Public Class LayoutProcessor
         End If
 
         'load parent layout html and its node
-        Dim parentLayoutPath As String = ManifestHelper.GetLayoutVirtualFilePath(layoutViewNode, Manifest)
+        Dim parentLayoutPath As String = ManifestProvider.GetLayoutVirtualFilePath(layoutViewNode, Manifest)
 
         If Not Helper.FileExists(parentLayoutPath) Then
             Throw New Exception("LayoutPreProcessor - PreProcess, Layout file does not found! File path: " & parentLayoutPath)
@@ -26,7 +26,7 @@ Public Class LayoutProcessor
         Dim parentLayoutContent As String = Helper.GetVirtualFileContent(parentLayoutPath)
 
         'the layout file should only be pre processed
-        parentLayoutContent = ProcessManager.PreProcess(parentLayoutContent)
+        parentLayoutContent = iViewProcessManager.PreProcess(parentLayoutContent)
         Dim parentLayoutNode As HtmlNode = Helper.GetHtmlNode(parentLayoutContent)
 
         Return ReplaceParentNodesWithChildNodes(parentLayoutNode, layoutViewNode)
@@ -56,7 +56,6 @@ Public Class LayoutProcessor
 
                     'replace the layout node with new view node 
                     layoutNode.ParentNode.ReplaceChild(sectionNode, layoutNode)
-
 
                 Next
 

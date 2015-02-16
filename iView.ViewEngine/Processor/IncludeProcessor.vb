@@ -7,8 +7,11 @@ Public Class IncludeProcessor
 
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
 
+        Dim manifest As Manifest = ManifestProvider.Manifest
+
         'find all include elements in view
-        Dim includeNodesInView As HtmlNodeCollection = htmlNode.SelectNodes(INCLUDE_TAG_XPATH_FILTER)
+        Dim xpathFilter As String = "//" & manifest.IncludeTagName & "[@" & manifest.IncludeSourceAttributeName & "]"
+        Dim includeNodesInView As HtmlNodeCollection = htmlNode.SelectNodes(xpathFilter)
 
         'if there is no include node, there is no need to be processed
         If includeNodesInView Is Nothing OrElse includeNodesInView.Count = 0 Then
@@ -17,14 +20,14 @@ Public Class IncludeProcessor
 
         For Each includeInViewNode In includeNodesInView
 
-            Dim includeFileVirtualPath As String = includeInViewNode.Attributes(INCLUDE_TAG_SOURCE_ATTRIBUTE).Value
+            Dim includeFileVirtualPath As String = includeInViewNode.Attributes(manifest.IncludeSourceAttributeName).Value
 
             If Not Helper.FileExists(includeFileVirtualPath) Then
                 Throw New Exception("IncludePreProcessor - PreProcess, Include file does not found! File path: " & includeFileVirtualPath)
             End If
 
             'process include file content
-            Dim includeHtmlContent As String = ProcessManager.ProcessView(includeFileVirtualPath)
+            Dim includeHtmlContent As String = iViewProcessManager.ProcessView(includeFileVirtualPath)
 
             'replace include content with include node in view
             Dim includeInSourceNode As HtmlNode = Helper.GetHtmlNode(includeHtmlContent)

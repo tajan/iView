@@ -7,7 +7,7 @@ Public MustInherit Class BaseControlProcessor
 
         'there is always one node in Document Node
         Dim controlViewNode As HtmlNode = Helper.GetHtmlNode(viewControlHtmlContent).ChildNodes(0)
-        Dim controlSourceNode As HtmlNode = Helper.GetHtmlNode(sourceControlHtmlContent).ChildNodes(CONTROL_TAG)
+        Dim controlSourceNode As HtmlNode = Helper.GetHtmlNode(sourceControlHtmlContent).ChildNodes(ManifestProvider.Manifest.ControlTagName)
 
         If controlSourceNode Is Nothing Then
             Throw New NullReferenceException("There is no control tag in control file:" & controlViewNode.Name)

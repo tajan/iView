@@ -14,7 +14,7 @@ Public Class SimpleAttributeBinderProcessor
         End If
 
         'find all normal attributes in view
-        Dim attributes = viewControlNode.Attributes.Where(Function(x) Not x.Name.Contains(IV_ATTRIBUTE_PREFIX))
+        Dim attributes = viewControlNode.Attributes.Where(Function(x) Not x.Name.Contains(ManifestProvider.Manifest.AttributePrefix))
 
         'attach all the normal attributes to source
         For Each sourceNode In sourceNodes

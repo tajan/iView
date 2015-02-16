@@ -8,7 +8,7 @@ Public Class ComplexAttributeProcessor
         Dim out As String = sourceControlNode.OuterHtml
 
         For Each attribute In sourceControlNode.Attributes
-            out = out.Replace(CONTROL_TAG_ATTRIBUTE_PREFIX & attribute.Name, attribute.Value)
+            out = out.Replace(ManifestProvider.Manifest.ControlAttributePrefix & attribute.Name, attribute.Value)
         Next
 
         'Dim attributes = viewControlNode.Attributes.Where(Function(x) x.Name.StartsWith(IV_ATTRIBUTE_PREFIX)).ToList

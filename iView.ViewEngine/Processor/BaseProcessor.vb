@@ -15,10 +15,7 @@
     Public MustOverride Function Process(content As String) As String Implements IProcessor.Process
 
     Public Sub New()
-        _manifest = ManifestHelper.GetManifest
-        If HtmlAgilityPack.HtmlNode.ElementsFlags.ContainsKey("form") Then
-            HtmlAgilityPack.HtmlNode.ElementsFlags.Remove("form")
-        End If
+        _manifest = ManifestProvider.Manifest
     End Sub
 
 End Class

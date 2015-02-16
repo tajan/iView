@@ -6,12 +6,12 @@ Public Class ControlTagRemoverProcessor
     Public Overrides Function PostProcess(content As String) As String
 
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-        Dim controlNodes = htmlNode.SelectNodes("//" & CONTROL_TAG)
+        Dim controlNodes = htmlNode.SelectNodes("//" & ManifestProvider.Manifest.ControlTagName)
 
         If controlNodes Is Nothing Then
             Return content
         End If
-
+        'todo: amir
         'For Each x In controlNodes.ToList
         '    x.ParentNode.RemoveChild(x, True)
         'Next

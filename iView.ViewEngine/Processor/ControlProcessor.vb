@@ -18,7 +18,7 @@ Public Class ControlProcessor
 
             ProcessNode(chilNode)
 
-            If Helper.IsControl(chilNode) Then
+            If IsControl(chilNode) Then
                 ProcessComplexControl(chilNode)
             End If
 
@@ -28,8 +28,8 @@ Public Class ControlProcessor
 
     Private Sub ProcessComplexControl(htmlNode As HtmlNode)
 
-        Dim sourceControlContent As String = Process(Helper.GetControlSourceNode(htmlNode))
-        Dim processedContent As String = ProcessManager.ProcessControls(htmlNode.OuterHtml, sourceControlContent)
+        Dim sourceControlContent As String = Process(GetControlSourceNode(htmlNode))
+        Dim processedContent As String = iViewProcessManager.ProcessControls(htmlNode.OuterHtml, sourceControlContent)
         Dim newNode = Helper.GetHtmlNode(processedContent)
 
         htmlNode.ParentNode.ReplaceChild(newNode, htmlNode)
@@ -44,6 +44,34 @@ Public Class ControlProcessor
     Public Overrides Function PreProcess(content As String) As String
         'do nothing
         Return content
+    End Function
+
+    Private Function GetControlSourceNode(htmlNode As HtmlNode) As String
+
+        If IsControl(htmlNode) Then
+
+            Dim controlSourceFilePath As String = ManifestProvider.GetControlFileVirtualPath(htmlNode, ManifestProvider.Manifest)
+
+            If Not Helper.FileExists(controlSourceFilePath) Then
+                Throw New Exception("Control file does not exist! File path: " & controlSourceFilePath)
+            End If
+
+            Return Helper.GetVirtualFileContent(controlSourceFilePath)
+
+        Else
+
+            Return Nothing
+
+        End If
+
+    End Function
+
+    Private Function IsControl(htmlNode As HtmlNode) As Boolean
+        If htmlNode.Attributes.Where(Function(x) x.Name = ManifestProvider.Manifest.AttributePrefix).Count = 1 Then
+            Return True
+        Else
+            Return False
+        End If
     End Function
 
 End Class
