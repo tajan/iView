@@ -7,9 +7,7 @@ Public Module StartupConfig
     <Extension>
     Public Sub iViewConfig(app As IAppBuilder)
 
-        If HtmlAgilityPack.HtmlNode.ElementsFlags.ContainsKey("form") Then
-            HtmlAgilityPack.HtmlNode.ElementsFlags.Remove("form")
-        End If
+        HtmlAgilityPack.HtmlNode.ElementsFlags.Clear()
 
         HostingEnvironment.RegisterVirtualPathProvider(New iViewResourceProvider)
 

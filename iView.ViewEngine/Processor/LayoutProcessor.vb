@@ -3,6 +3,8 @@
 Public Class LayoutProcessor
     Inherits BaseProcessor
 
+    Private flagAttribute As String = "iv-layout-processed-remove-later"
+
     Public Overrides Function PreProcess(content As String) As String
 
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
@@ -56,6 +58,7 @@ Public Class LayoutProcessor
 
                     'replace the layout node with new view node 
                     layoutNode.ParentNode.ReplaceChild(sectionNode, layoutNode)
+                    sectionNode.Attributes.Add(flagAttribute, "true")
 
                 Next
 
@@ -68,22 +71,18 @@ Public Class LayoutProcessor
     End Function
 
     Public Overrides Function PostProcess(content As String) As String
+
+        Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
+
         'find all elements which is layout container
+        Dim layoutNodes = htmlNode.DescendantsAndSelf.Where(Function(x) x.Attributes.Contains(flagAttribute)).ToList
 
-        Return content
+        For Each layoutNode As HtmlNode In layoutNodes
+            layoutNode.ParentNode.RemoveChild(layoutNode, True)
+        Next
 
+        Return htmlNode.OuterHtml
 
-
-        'todo: implement here
-
-        'Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-        'Dim layoutNodes = htmlNode.SelectNodes(LAYOUT_XPATH_FILTER)
-
-        'For Each layoutNode As HtmlNode In layoutNodes
-        '    layoutNode.ParentNode.RemoveChild(layoutNode, True)
-        'Next
-
-        'Return htmlNode.OuterHtml
     End Function
 
     Public Overrides Function Process(content As String) As String

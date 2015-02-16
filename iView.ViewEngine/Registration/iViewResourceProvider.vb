@@ -1,4 +1,5 @@
 ﻿Imports System.Web.Hosting
+Imports Microsoft.Owin
 
 Public Class iViewResourceProvider
     Inherits VirtualPathProvider
@@ -8,16 +9,13 @@ Public Class iViewResourceProvider
     End Sub
 
     Public Overrides Function FileExists(ByVal virtualPath As String) As Boolean
-        Return Helper.FileExists(GetViewFilePath(virtualPath))
+        Return Helper.FileExists(virtualPath)
     End Function
 
     Public Overrides Function GetFile(ByVal virtualPath As String) As VirtualFile
-        Return New iViewVirtualFile(GetViewFilePath(virtualPath))
+        Return New iViewVirtualFile(virtualPath)
     End Function
 
-    Private Function GetViewFilePath(ByVal virtualPath As String) As String
-        Return virtualPath
-    End Function
 
 End Class
 

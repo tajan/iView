@@ -4,18 +4,16 @@ Public Class ControlTagRemoverProcessor
     Inherits BaseProcessor
 
     Public Overrides Function PostProcess(content As String) As String
-
+        Return content
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
         Dim controlNodes = htmlNode.SelectNodes("//" & ManifestProvider.Manifest.ControlTagName)
 
-        If controlNodes Is Nothing Then
-            Return content
-        End If
-        'todo: amir
-        'For Each x In controlNodes.ToList
-        '    x.ParentNode.RemoveChild(x, True)
-        'Next
+        For Each x In controlNodes.ToList
+            x.ParentNode.RemoveChild(x, True)
+        Next
+
         Return htmlNode.OuterHtml
+
     End Function
 
     Public Overrides Function PreProcess(content As String) As String
