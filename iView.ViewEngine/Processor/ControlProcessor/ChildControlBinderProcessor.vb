@@ -7,7 +7,7 @@ Public Class ChildControlBinderProcessor
 
          For Each viewChildNode In viewControlNode.ChildNodes.Where(Function(x) x.NodeType = HtmlNodeType.Element)
 
-            Dim sourceNodes = sourceControlNode.Descendants(viewChildNode.Name).ToList.Where(Function(x) x.Name <> ManifestProvider.Manifest.ControlTagName AndAlso x.Name <> ManifestProvider.Manifest.ControlContentTagName AndAlso x.Name.StartsWith(ManifestProvider.Manifest.AttributePrefix))
+            Dim sourceNodes = sourceControlNode.Descendants(viewChildNode.Name).ToList.Where(Function(x) x.Name <> Manifest.ControlTagName AndAlso x.Name <> Manifest.ControlContentTagName AndAlso x.Name.StartsWith(Manifest.AttributePrefix))
 
             For Each sourceNode In sourceNodes
 

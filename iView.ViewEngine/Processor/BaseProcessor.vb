@@ -8,11 +8,20 @@
         End Get
     End Property
 
-    Public MustOverride Function PostProcess(content As String) As String Implements IProcessor.PostProcess
+    Public Overridable Function PostProcess(content As String) As String Implements IProcessor.PostProcess
+        'do nothing
+        Return content
+    End Function
 
-    Public MustOverride Function PreProcess(content As String) As String Implements IProcessor.PreProcess
+    Public Overridable Function PreProcess(content As String) As String Implements IProcessor.PreProcess
+        'do nothing
+        Return content
+    End Function
 
-    Public MustOverride Function Process(content As String) As String Implements IProcessor.Process
+    Public Overridable Function Process(content As String) As String Implements IProcessor.Process
+        'do nothing
+        Return content
+    End Function
 
     Public Sub New()
         _manifest = ManifestProvider.Manifest

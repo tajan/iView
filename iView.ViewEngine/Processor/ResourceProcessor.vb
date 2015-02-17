@@ -1,9 +1,9 @@
 ﻿Imports HtmlAgilityPack
 
 Public Class ResourceProcessor
-    Implements IProcessor
+    Inherits BaseProcessor
 
-    Public Function PostProcess(content As String) As String Implements IProcessor.PostProcess
+    Public Overrides Function PostProcess(content As String) As String
 
         Dim manifest As Manifest = ManifestProvider.Manifest
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
@@ -72,16 +72,6 @@ Public Class ResourceProcessor
 
         Return htmlNode.OuterHtml
 
-    End Function
-
-    Public Function PreProcess(content As String) As String Implements IProcessor.PreProcess
-        'do nothing
-        Return content
-    End Function
-
-    Public Function Process(content As String) As String Implements IProcessor.Process
-        'do nothing
-        Return content
     End Function
 
 End Class

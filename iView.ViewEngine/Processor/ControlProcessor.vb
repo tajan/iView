@@ -1,4 +1,5 @@
 ﻿Imports HtmlAgilityPack
+
 Public Class ControlProcessor
     Inherits BaseProcessor
 
@@ -16,6 +17,7 @@ Public Class ControlProcessor
 
             Dim chilNode As HtmlNode = htmlNode.ChildNodes(i)
 
+            'recursivly load child nodes and process down/up
             ProcessNode(chilNode)
 
             If IsControl(chilNode) Then
@@ -36,21 +38,11 @@ Public Class ControlProcessor
 
     End Sub
 
-    Public Overrides Function PostProcess(content As String) As String
-        'do nothing
-        Return content
-    End Function
-
-    Public Overrides Function PreProcess(content As String) As String
-        'do nothing
-        Return content
-    End Function
-
     Private Function GetControlSourceNode(htmlNode As HtmlNode) As String
 
         If IsControl(htmlNode) Then
 
-            Dim controlSourceFilePath As String = ManifestProvider.GetControlFileVirtualPath(htmlNode, ManifestProvider.Manifest)
+            Dim controlSourceFilePath As String = ManifestProvider.GetControlFileVirtualPath(htmlNode, Manifest)
 
             If Not Helper.FileExists(controlSourceFilePath) Then
                 Throw New Exception("Control file does not exist! File path: " & controlSourceFilePath)
@@ -67,7 +59,7 @@ Public Class ControlProcessor
     End Function
 
     Private Function IsControl(htmlNode As HtmlNode) As Boolean
-        If htmlNode.Attributes.Where(Function(x) x.Name = ManifestProvider.Manifest.AttributePrefix).Count = 1 Then
+        If htmlNode.Attributes.Where(Function(x) x.Name = ManifestProvider.Manifest.ControlTypeAttributeName).Count = 1 Then
             Return True
         Else
             Return False

@@ -10,7 +10,7 @@ Public Class AttributeBinderProcessor
         End If
 
         'copy all attributes from view root node to control root node
-        For Each attribute In viewControlNode.Attributes.Where(Function(x) x.Name <> ManifestProvider.Manifest.AttributePrefix).ToList
+        For Each attribute In viewControlNode.Attributes.Where(Function(x) x.Name <> Manifest.AttributePrefix).ToList
 
             If sourceControlNode.Attributes.Contains(attribute.Name) Then
                 sourceControlNode.Attributes(attribute.Name).Value = attribute.Value

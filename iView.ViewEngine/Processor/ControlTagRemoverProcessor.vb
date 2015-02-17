@@ -6,7 +6,7 @@ Public Class ControlTagRemoverProcessor
     Public Overrides Function PostProcess(content As String) As String
         Return content
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-        Dim controlNodes = htmlNode.SelectNodes("//" & ManifestProvider.Manifest.ControlTagName)
+        Dim controlNodes = htmlNode.SelectNodes("//" & Manifest.ControlTagName)
 
         For Each x In controlNodes.ToList
             x.ParentNode.RemoveChild(x, True)
@@ -14,16 +14,6 @@ Public Class ControlTagRemoverProcessor
 
         Return htmlNode.OuterHtml
 
-    End Function
-
-    Public Overrides Function PreProcess(content As String) As String
-        'do nothing
-        Return content
-    End Function
-
-    Public Overrides Function Process(content As String) As String
-        'do nothing
-        Return content
     End Function
 
 End Class

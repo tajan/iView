@@ -9,7 +9,7 @@ Public Class ContentBinderProcessor
             Return sourceControlNode.OuterHtml
         End If
 
-        Dim contentNodes = sourceControlNode.Descendants(ManifestProvider.Manifest.ControlContentTagName).ToList
+        Dim contentNodes = sourceControlNode.Descendants(Manifest.ControlContentTagName).ToList
 
         For Each contentNodeInSource In contentNodes
             viewControlNode.ChildNodes.ToList.ForEach(Sub(x) contentNodeInSource.ChildNodes.Add(x))

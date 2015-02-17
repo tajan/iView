@@ -35,7 +35,6 @@ Public Class LayoutProcessor
 
     End Function
 
-
     Private Function ReplaceParentNodesWithChildNodes(parentLayoutNode As HtmlNode, viewNode As HtmlNode) As String
 
         'take first level child nodes, only html element nodes
@@ -72,22 +71,20 @@ Public Class LayoutProcessor
 
     Public Overrides Function PostProcess(content As String) As String
 
-        Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-
-        'find all elements which is layout container
-        Dim layoutNodes = htmlNode.DescendantsAndSelf.Where(Function(x) x.Attributes.Contains(flagAttribute)).ToList
-
-        For Each layoutNode As HtmlNode In layoutNodes
-            layoutNode.ParentNode.RemoveChild(layoutNode, True)
-        Next
-
-        Return htmlNode.OuterHtml
-
-    End Function
-
-    Public Overrides Function Process(content As String) As String
-        'do nothing
         Return content
+
+        'todo:
+        'Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
+
+        ''find all elements which is layout container
+        'Dim layoutNodes = htmlNode.DescendantsAndSelf.Where(Function(x) x.Attributes.Contains(flagAttribute)).ToList
+
+        'For Each layoutNode As HtmlNode In layoutNodes
+        '    layoutNode.ParentNode.RemoveChild(layoutNode, True)
+        'Next
+
+        'Return htmlNode.OuterHtml
+
     End Function
 
 

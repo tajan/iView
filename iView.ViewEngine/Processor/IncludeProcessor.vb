@@ -1,16 +1,14 @@
 ﻿Imports HtmlAgilityPack
 
 Public Class IncludeProcessor
-    Implements IProcessor
+    Inherits BaseProcessor
 
-    Public Function PreProcess(content As String) As String Implements IProcessor.PreProcess
+    Public Overrides Function PreProcess(content As String) As String
 
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
 
-        Dim manifest As Manifest = ManifestProvider.Manifest
-
         'find all include elements in view
-        Dim xpathFilter As String = "//" & manifest.IncludeTagName & "[@" & manifest.IncludeSourceAttributeName & "]"
+        Dim xpathFilter As String = "//" & Manifest.IncludeTagName & "[@" & Manifest.IncludeSourceAttributeName & "]"
         Dim includeNodesInView As HtmlNodeCollection = htmlNode.SelectNodes(xpathFilter)
 
         'if there is no include node, there is no need to be processed
@@ -20,9 +18,10 @@ Public Class IncludeProcessor
 
         For Each includeInViewNode In includeNodesInView
 
-            Dim includeFileVirtualPath As String = includeInViewNode.Attributes(manifest.IncludeSourceAttributeName).Value
+            Dim includeFileVirtualPath As String = includeInViewNode.Attributes(Manifest.IncludeSourceAttributeName).Value
 
             If Not Helper.FileExists(includeFileVirtualPath) Then
+                'todo: cleanup exceptioin
                 Throw New Exception("IncludePreProcessor - PreProcess, Include file does not found! File path: " & includeFileVirtualPath)
             End If
 
@@ -37,16 +36,6 @@ Public Class IncludeProcessor
 
         Return htmlNode.OuterHtml
 
-    End Function
-
-    Public Function PostProcess(content As String) As String Implements IProcessor.PostProcess
-        'do nothing
-        Return content
-    End Function
-
-    Public Function Process(content As String) As String Implements IProcessor.Process
-        'do nothing
-        Return content
     End Function
 
 End Class
