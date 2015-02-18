@@ -84,7 +84,6 @@
     <Compile Include="Processor\BaseProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\BaseControlProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\ContentBinderProcessor.vb" />
-    <Compile Include="Processor\ControlTagRemoverProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\SimpleAttributeBinderProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\ComplexAttributeProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\ChildControlBinderProcessor.vb" />

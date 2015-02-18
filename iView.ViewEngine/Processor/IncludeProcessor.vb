@@ -21,8 +21,7 @@ Public Class IncludeProcessor
             Dim includeFileVirtualPath As String = includeInViewNode.Attributes(Manifest.IncludeSourceAttributeName).Value
 
             If Not Helper.FileExists(includeFileVirtualPath) Then
-                'todo: cleanup exceptioin
-                Throw New Exception("IncludePreProcessor - PreProcess, Include file does not found! File path: " & includeFileVirtualPath)
+                Throw New System.IO.FileNotFoundException("Include file does not exist:", includeFileVirtualPath)
             End If
 
             'process include file content

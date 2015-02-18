@@ -36,6 +36,7 @@
     Public Property LayoutThemeAttributeName As String = "iv-theme"
     Public Property LayoutPathAttributeName As String = "iv-layout"
     Public Property LayoutSourceAttributeName As String = "iv-source"
+    Public Property LayoutExcludeRemovalAttributeName As String = "iv-exclude"
 
     Public Sub New()
         Me.Layout = New Layout

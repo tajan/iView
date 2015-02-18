@@ -57,7 +57,11 @@ Public Class LayoutProcessor
 
                     'replace the layout node with new view node 
                     layoutNode.ParentNode.ReplaceChild(sectionNode, layoutNode)
-                    sectionNode.Attributes.Add(flagAttribute, "true")
+                    If Not layoutNode.Attributes.Contains(Manifest.LayoutExcludeRemovalAttributeName) Then
+                        sectionNode.Attributes.Add(flagAttribute, "true")
+                    Else
+                        sectionNode.Attributes.Add(Manifest.LayoutExcludeRemovalAttributeName, "true")
+                    End If
 
                 Next
 
@@ -71,19 +75,16 @@ Public Class LayoutProcessor
 
     Public Overrides Function PostProcess(content As String) As String
 
-        Return content
+        Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
 
-        'todo:
-        'Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
+        'find all elements which is layout container
+        Dim layoutNodes = htmlNode.DescendantsAndSelf.Where(Function(x) x.Attributes.Contains(flagAttribute)).ToList
 
-        ''find all elements which is layout container
-        'Dim layoutNodes = htmlNode.DescendantsAndSelf.Where(Function(x) x.Attributes.Contains(flagAttribute)).ToList
+        For Each layoutNode As HtmlNode In layoutNodes
+            layoutNode.ParentNode.RemoveChild(layoutNode, True)
+        Next
 
-        'For Each layoutNode As HtmlNode In layoutNodes
-        '    layoutNode.ParentNode.RemoveChild(layoutNode, True)
-        'Next
-
-        'Return htmlNode.OuterHtml
+        Return htmlNode.OuterHtml
 
     End Function
 

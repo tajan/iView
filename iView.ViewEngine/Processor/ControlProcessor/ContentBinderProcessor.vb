@@ -13,8 +13,7 @@ Public Class ContentBinderProcessor
 
         For Each contentNodeInSource In contentNodes
             viewControlNode.ChildNodes.ToList.ForEach(Sub(x) contentNodeInSource.ChildNodes.Add(x))
-            'todo: remove iv-content nodes
-            'contentNodeInSource.ParentNode.RemoveChild(contentNodeInSource, True)
+            contentNodeInSource.ParentNode.RemoveChild(contentNodeInSource, True)
         Next
 
         Return sourceControlNode.OuterHtml

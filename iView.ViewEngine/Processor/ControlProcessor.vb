@@ -11,6 +11,19 @@ Public Class ControlProcessor
 
     End Function
 
+    Public Overrides Function PostProcess(content As String) As String
+
+        Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
+        Dim controlNodes = htmlNode.SelectNodes("//" & Manifest.ControlTagName)
+
+        For Each controlNode In controlNodes.ToList
+            controlNode.ParentNode.RemoveChild(controlNode, True)
+        Next
+
+        Return htmlNode.OuterHtml
+
+    End Function
+
     Private Sub ProcessNode(htmlNode As HtmlNode)
 
         For i As Integer = 0 To htmlNode.ChildNodes.Count - 1
