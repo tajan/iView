@@ -7,7 +7,7 @@ Public Module StartupConfig
     <Extension>
     Public Sub iViewConfig(app As IAppBuilder)
 
-        'HtmlAgilityPack.HtmlNode.ElementsFlags.Clear()
+        HtmlAgilityPack.HtmlNode.ElementsFlags.Clear()
 
         HostingEnvironment.RegisterVirtualPathProvider(New iViewResourceProvider)
 
