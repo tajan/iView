@@ -7,7 +7,7 @@ Public Module StartupConfig
     <Extension>
     Public Sub iViewConfig(app As IAppBuilder)
 
-        HtmlAgilityPack.HtmlNode.ElementsFlags.Clear()
+        'HtmlAgilityPack.HtmlNode.ElementsFlags.Clear()
 
         HostingEnvironment.RegisterVirtualPathProvider(New iViewResourceProvider)
 
@@ -15,6 +15,7 @@ Public Module StartupConfig
         iViewProcessManager.RegisterViewProcessor(New LayoutProcessor)
         iViewProcessManager.RegisterViewProcessor(New ControlProcessor)
         iViewProcessManager.RegisterViewProcessor(New ResourceProcessor)
+        iViewProcessManager.RegisterViewProcessor(New ProcessedTagRemovalProcessor)
 
         iViewProcessManager.RegisterControlProcessor(New AttributeBinderProcessor)
         iViewProcessManager.RegisterControlProcessor(New ContentBinderProcessor)

@@ -38,6 +38,8 @@
     Public Property LayoutSourceAttributeName As String = "iv-source"
     Public Property LayoutExcludeRemovalAttributeName As String = "iv-exclude"
 
+    Public Property ProcessedTagAttributeName As String = "iv-processed-tag-marker-flag"
+
     Public Sub New()
         Me.Layout = New Layout
         Me.Control = New Control

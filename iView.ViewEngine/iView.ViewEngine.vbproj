@@ -88,6 +88,7 @@
     <Compile Include="Processor\ControlProcessor\ComplexAttributeProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\ChildControlBinderProcessor.vb" />
     <Compile Include="Processor\ControlProcessor\IControlProcessor.vb" />
+    <Compile Include="Processor\ProcessedTagRemovalProcessor.vb" />
     <Compile Include="Registration\iViewProcessManager.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

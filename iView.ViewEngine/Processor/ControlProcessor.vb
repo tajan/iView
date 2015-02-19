@@ -11,19 +11,6 @@ Public Class ControlProcessor
 
     End Function
 
-    Public Overrides Function PostProcess(content As String) As String
-
-        Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-        Dim controlNodes = htmlNode.SelectNodes("//" & Manifest.ControlTagName)
-
-        For Each controlNode In controlNodes.ToList
-            controlNode.ParentNode.RemoveChild(controlNode, True)
-        Next
-
-        Return htmlNode.OuterHtml
-
-    End Function
-
     Private Sub ProcessNode(htmlNode As HtmlNode)
 
         For i As Integer = 0 To htmlNode.ChildNodes.Count - 1
@@ -34,6 +21,7 @@ Public Class ControlProcessor
             ProcessNode(chilNode)
 
             If IsControl(chilNode) Then
+                chilNode.Attributes.Add(Manifest.ProcessedTagAttributeName, "true")
                 ProcessComplexControl(chilNode)
             End If
 
@@ -72,7 +60,7 @@ Public Class ControlProcessor
     End Function
 
     Private Function IsControl(htmlNode As HtmlNode) As Boolean
-        If htmlNode.Attributes.Where(Function(x) x.Name = ManifestProvider.Manifest.ControlTypeAttributeName).Count = 1 Then
+        If htmlNode.Attributes.Where(Function(x) x.Name = Manifest.ControlTypeAttributeName).Count = 1 Then
             Return True
         Else
             Return False

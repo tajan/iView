@@ -13,7 +13,7 @@ Public Class ContentBinderProcessor
 
         For Each contentNodeInSource In contentNodes
             viewControlNode.ChildNodes.ToList.ForEach(Sub(x) contentNodeInSource.ChildNodes.Add(x))
-            contentNodeInSource.ParentNode.RemoveChild(contentNodeInSource, True)
+            contentNodeInSource.Attributes.Add(Manifest.ProcessedTagAttributeName, "true")
         Next
 
         Return sourceControlNode.OuterHtml

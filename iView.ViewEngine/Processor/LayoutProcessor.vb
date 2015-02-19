@@ -3,15 +3,13 @@
 Public Class LayoutProcessor
     Inherits BaseProcessor
 
-    Private flagAttribute As String = "iv-layout-processed-remove-later"
-
     Public Overrides Function PreProcess(content As String) As String
 
         Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
 
         'find first layout node
         'each view file contains only 1 layout (inheritance)
-        Dim layoutViewNode As HtmlNode = htmlNode.SelectSingleNode(ManifestProvider.Manifest.LayoutTagName)
+        Dim layoutViewNode As HtmlNode = htmlNode.SelectSingleNode(Manifest.LayoutTagName)
 
         'if there is no layout node, there is no need to process the node
         If layoutViewNode Is Nothing OrElse layoutViewNode.ChildNodes.Count = 0 Then
@@ -58,7 +56,7 @@ Public Class LayoutProcessor
                     'replace the layout node with new view node 
                     layoutNode.ParentNode.ReplaceChild(sectionNode, layoutNode)
                     If Not layoutNode.Attributes.Contains(Manifest.LayoutExcludeRemovalAttributeName) Then
-                        sectionNode.Attributes.Add(flagAttribute, "true")
+                        sectionNode.Attributes.Add(Manifest.ProcessedTagAttributeName, "true")
                     Else
                         sectionNode.Attributes.Add(Manifest.LayoutExcludeRemovalAttributeName, "true")
                     End If
@@ -70,21 +68,6 @@ Public Class LayoutProcessor
         Next
 
         Return parentLayoutNode.OuterHtml
-
-    End Function
-
-    Public Overrides Function PostProcess(content As String) As String
-
-        Dim htmlNode As HtmlNode = Helper.GetHtmlNode(content)
-
-        'find all elements which is layout container
-        Dim layoutNodes = htmlNode.DescendantsAndSelf.Where(Function(x) x.Attributes.Contains(flagAttribute)).ToList
-
-        For Each layoutNode As HtmlNode In layoutNodes
-            layoutNode.ParentNode.RemoveChild(layoutNode, True)
-        Next
-
-        Return htmlNode.OuterHtml
 
     End Function
 
