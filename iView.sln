@@ -7,6 +7,22 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "iView.ViewEngine", "iView.V
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SampleApplication", "SampleApplication\SampleApplication.vbproj", "{7B7C1193-773B-4E5C-88A3-F8D03A7B6748}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{48BD0AF7-87B2-4E37-B092-326622076271}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget\iView.1.0.0.nupkg = Nuget\iView.1.0.0.nupkg
+		Nuget\iView.1.0.1.nupkg = Nuget\iView.1.0.1.nupkg
+		Nuget\iView.1.0.2.nupkg = Nuget\iView.1.0.2.nupkg
+		Nuget\iView.1.0.3.nupkg = Nuget\iView.1.0.3.nupkg
+		Nuget\iView.1.0.4.nupkg = Nuget\iView.1.0.4.nupkg
+		Nuget\iView.1.0.5.nupkg = Nuget\iView.1.0.5.nupkg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{9D47E8F6-98F0-4D44-AB2C-927212E1FE40}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget\Content\web.config.install.xdt = Nuget\Content\web.config.install.xdt
+		Nuget\Content\web.config.uninstall.xdt = Nuget\Content\web.config.uninstall.xdt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D47E8F6-98F0-4D44-AB2C-927212E1FE40} = {48BD0AF7-87B2-4E37-B092-326622076271}
 	EndGlobalSection
 EndGlobal
