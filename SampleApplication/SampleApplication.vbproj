@@ -98,30 +98,43 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\cerulean.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\lib\bootstrap\js\bootstrap.min.js.map" />
     <None Include="iViewManifest.config" />
-    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <None Include="Content\lib\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="iView\Default.html" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-2.1.3.js" />
-    <Content Include="Scripts\jquery-2.1.3.min.js" />
-    <Content Include="Scripts\npm.js" />
-    <Content Include="Template\Default\Controls\view\heading.html" />
-    <Content Include="Template\Default\Controls\view\paragraph.html" />
+    <Content Include="iView\kitchensink.html" />
+    <Content Include="Content\lib\jquery\jquery-2.1.3.js" />
+    <Content Include="Content\lib\jquery\jquery-2.1.3.min.js" />
+    <Content Include="Template\Default\Controls\button\cancel.html" />
+    <Content Include="Template\Default\Controls\button\group.html" />
+    <Content Include="Template\Default\Controls\button\submit.html" />
+    <Content Include="Template\Default\Controls\form\form.html" />
+    <Content Include="Template\Default\Controls\input\email.html" />
+    <Content Include="Template\Default\Controls\input\password.html" />
+    <Content Include="Template\Default\Controls\input\spinner.html" />
+    <Content Include="Template\Default\Controls\input\text.html" />
+    <Content Include="Template\Default\Controls\input\textarea.html" />
+    <Content Include="Template\Default\Controls\select\select.html" />
+    <Content Include="Template\Default\Controls\view\column.html" />
     <Content Include="Template\Default\Controls\view\row.html" />
-    <Content Include="Template\Default\Controls\view\section.html" />
+    <Content Include="Template\Default\Controls\icon\icon.html" />
     <Content Include="Template\Default\Layout\Default.html" />
     <Content Include="Template\Default\Layout\DefaultWithMenu.html" />
     <Content Include="Web.config" />
@@ -167,7 +180,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="packages.config" />
-    <Content Include="Scripts\jquery-2.1.3.min.map" />
+    <Content Include="Content\lib\jquery\jquery-2.1.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,7 +188,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

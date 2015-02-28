@@ -4,7 +4,6 @@ D:\Development\iView\iView.ViewEngine\bin\Debug\iView.ViewEngine.xml
 D:\Development\iView\iView.ViewEngine\bin\Debug\HtmlAgilityPack.dll
 D:\Development\iView\iView.ViewEngine\bin\Debug\HtmlAgilityPack.pdb
 D:\Development\iView\iView.ViewEngine\bin\Debug\HtmlAgilityPack.xml
-D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.vbprojResolveAssemblyReference.cache
 D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.Resources.resources
 D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.vbproj.GenerateResource.Cache
 D:\Development\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.dll
@@ -39,3 +38,8 @@ C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Debug\iView.ViewEngi
 C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.dll
 C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.xml
 C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Debug\iView.ViewEngine.pdb
+D:\Development\iview\iView.ViewEngine\bin\Debug\Microsoft.Owin.dll
+D:\Development\iview\iView.ViewEngine\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\Development\iview\iView.ViewEngine\bin\Debug\Owin.dll
+D:\Development\iview\iView.ViewEngine\bin\Debug\Microsoft.Owin.xml
+D:\Development\iview\iView.ViewEngine\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml

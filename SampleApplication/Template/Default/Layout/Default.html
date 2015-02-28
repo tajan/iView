@@ -1,18 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title iv-exclude="true">Page title goes here!</title>
+    <title iv-exclude="true">
+        <pagetitle></pagetitle>
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/Content/bootstrap.css" rel="stylesheet" />
-    <link href="/Content/cerulean.css" rel="stylesheet" />
-    <script src="/Scripts/jquery-2.1.3.min.js"></script>
-    <script src="/Scripts/bootstrap.min.js"></script>
+    <link href="/Content/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="/Content/lib/jquery/jquery-2.1.3.js"></script>
+    <script src="/Content/lib/bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
-    <headermenu></headermenu>
+
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">iView Sample Project</span>
+                </button>
+                <a class="navbar-brand" href="#">iView Sample Project</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../navbar/">Default</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <bodycontent></bodycontent>
+        <content></content>
     </div>
 </body>
 </html>

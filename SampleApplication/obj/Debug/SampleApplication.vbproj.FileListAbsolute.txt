@@ -50,3 +50,9 @@ C:\Users\a.pournasserian\Desktop\iView\SampleApplication\obj\Debug\SampleApplica
 C:\Users\a.pournasserian\Desktop\iView\SampleApplication\obj\Debug\SampleApplication.pdb
 C:\Users\a.pournasserian\Desktop\iView\SampleApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\a.pournasserian\Desktop\iView\SampleApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Development\iview\SampleApplication\bin\SampleApplication.dll.config
+D:\Development\iview\SampleApplication\bin\Microsoft.Owin.dll
+D:\Development\iview\SampleApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Development\iview\SampleApplication\bin\Owin.dll
+D:\Development\iview\SampleApplication\bin\Microsoft.Owin.xml
+D:\Development\iview\SampleApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
