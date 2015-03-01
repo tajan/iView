@@ -3,26 +3,129 @@
         KitchenSink
     </pagetitle>
     <content>
-        <form iv-type="form" iv-title="Simple Form">
+        <header iv-type="header">Carousel</header>
+        <carousel iv-type="carousel">
+            <carousel iv-type="item" iv-active="active">
+                <img data-src="holder.js/900x500/auto/#666:#666" alt="900x500" src="http://placehold.it/1200x350" data-holder-rendered="true">
+                <carousel iv-type="caption">
+                    <h3>First slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </carousel>
+            </carousel>
+            <carousel iv-type="item">
+                <img data-src="holder.js/900x500/auto/#666:#666" alt="900x500" src="http://placehold.it/1200x350" data-holder-rendered="true">
+                <carousel iv-type="caption">
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </carousel>
+            </carousel>
+        </carousel>
+
+        <header iv-type="header">Form</header>
+        <form iv-type="form">
             <input iv-type="text" iv-label="Text" />
+            <input iv-type="file" iv-label="File" />
             <input iv-type="email" iv-label="Email" />
             <input iv-type="password" iv-label="Password" />
             <input iv-type="textarea" iv-label="Textarea" />
             <input iv-type="spinner" iv-label="Spinner" />
             <select iv-type="select" iv-label="Select">
-                <option value="1">option 1</option>
-                <option value="2">option 2</option>
-                <option value="3">option 3</option>
-                <option value="4">option 4</option>
+                <select iv-type="item" iv-value="1">option 1</select>
+                <select iv-type="item" iv-value="2">option 2</select>
+                <select iv-type="item" iv-value="3">option 3</select>
+                <select iv-type="item" iv-value="4">option 4</select>
             </select>
+            <layout iv-type="spacer"></layout>
+            <layout iv-type="column" iv-size="12">
+                <button iv-type="submit" iv-label="Submit"></button>
+                <button iv-type="cancel" iv-label="Cancel"></button>
+            </layout>
+        </form>
+        <layout iv-type="spacer" iv-height="30px"></layout>
+        <header iv-type="header">Icon</header>
+        <icon iv-type="icon" iv-name="cloud"></icon>
+        <icon iv-type="icon" iv-name="log-in"></icon>
+        <icon iv-type="icon" iv-name="credit-card"></icon>
+        <icon iv-type="icon" iv-name="tower"></icon>
+        <icon iv-type="icon" iv-name="phone-alt"></icon>
+        <icon iv-type="icon" iv-name="send"></icon>
+        <icon iv-type="icon" iv-name="paperclip"></icon>
+        <icon iv-type="icon" iv-name="open"></icon>
+        <icon iv-type="icon" iv-name="tent"></icon>
+        <icon iv-type="icon" iv-name="apple"></icon>
+        <header iv-type="header">Button </header>
+        <button iv-type="submit" iv-label="Submit"></button>
+        <button iv-type="cancel" iv-label="Cancel"></button>
+        <button iv-type="default" iv-label="Default"></button>
+        <br />
+        <button iv-type="group">
             <button iv-type="submit" iv-label="Submit"></button>
             <button iv-type="cancel" iv-label="Cancel"></button>
-
-        </form>
-        <icon iv-type="icon" iv-name="cloud" ></icon>
-        <button iv-type="group">
-            <button iv-type="submit" iv-label="Test 1"></button>
-            <button iv-type="cancel" iv-label="Test 2"></button>
+            <button iv-type="default" iv-label="Success" iv-kind="success"></button>
+            <button iv-type="default" iv-label="Danger" iv-kind="danger"></button>
+            <button iv-type="default" iv-label="Info" iv-kind="info"></button>
+            <button iv-type="default" iv-label="Warning" iv-kind="warning"></button>
         </button>
+        <br />
+        <button iv-type="default" iv-size="lg" iv-label="Default"></button>
+        <button iv-type="default" iv-label="Default"></button>
+        <button iv-type="default" iv-size="sm" iv-label="Default"></button>
+        <button iv-type="default" iv-size="xs" iv-label="Default"></button>
+        <br />
+        <button iv-type="default" iv-size="xs" iv-label="Default">
+            <badge iv-type="badge">3</badge>
+        </button>
+        <button iv-type="default" iv-size="xs" iv-kind="success" iv-label="Default">
+            <badge iv-type="badge">3</badge>
+        </button>
+        <header iv-type="header">Image</header>
+        <img iv-type="img" iv-src="http://placehold.it/150x150" />
+        <img iv-type="img" iv-kind="circle" iv-src="http://placehold.it/150x150" />
+        <img iv-type="img" iv-kind="thumbnail" iv-src="http://placehold.it/150x150" />
+        <header iv-type="header">Label</header>
+        <h5>
+            Example heading
+            <label iv-type="label" iv-kind="default">New</label>
+            <label iv-type="label" iv-kind="primary">New</label>
+            <label iv-type="label" iv-kind="success">New</label>
+            <label iv-type="label" iv-kind="info">New</label>
+            <label iv-type="label" iv-kind="warning">New</label>
+            <label iv-type="label" iv-kind="danger">New</label>
+        </h5>
+        <header iv-type="header">Alert</header>
+        <alert iv-type="alert">This is alert and nothing else matters.</alert>
+        <alert iv-type="alert" iv-kind="info">This is alert and nothing else matters.</alert>
+        <alert iv-type="alert" iv-kind="warning">This is alert and nothing else matters.</alert>
+        <alert iv-type="alert" iv-kind="danger">This is alert and nothing else matters.</alert>
+        <header iv-type="header">Dropdown</header>
+        <dropdown iv-type="dropdown" iv-label="Dropdown">
+            <dropdown iv-type="item" iv-label="Option 1"></dropdown>
+            <dropdown iv-type="item" iv-label="Option 2"></dropdown>
+            <dropdown iv-type="item" iv-label="Option 3"></dropdown>
+            <dropdown iv-type="item" iv-label="Option 4"></dropdown>
+        </dropdown>
+        <header iv-type="header">Panel</header>
+        <panel iv-type="panel">
+            <iv-header>Panel Herader</iv-header>
+            <iv-body>Body</iv-body>
+            <iv-footer>Footer Text</iv-footer>
+        </panel>
+        <header iv-type="header">jumbotron</header>
+        <layout iv-type="jumbotron">
+            <h2>This is title<label iv-type="label" iv-kind="danger">New</label></h2>
+            <p>Augue in nec tortor sed hac, amet, urna dis eros quis habitasse dictumst turpis adipiscing a amet, sit.</p>
+            <button iv-type="default" iv-label="Default"></button>
+        </layout>
+        <header iv-type="header">List group</header>
+        <list iv-type="list">
+            <list iv-type="item">
+                list item 1 <label iv-type="label" iv-kind="success">New</label>
+            </list>
+            <list iv-type="item">list item 2</list>
+            <list iv-type="item">list item 3</list>
+            <list iv-type="item">list item 4</list>
+        </list>
+        <layout iv-type="spacer" iv-height="100px" iv-href="#"></layout>
+        <layout iv-type="spacer" iv-height="100px" iv-href="#"></layout>
     </content>
 </layout>
