@@ -22,28 +22,35 @@
         </carousel>
         <header iv-type="header">Form</header>
         <form iv-type="form">
-            <input iv-type="text" iv-label="Text" />
-            <input iv-type="file" iv-label="File" />
-            <input iv-type="email" iv-label="Email" />
-            <input iv-type="password" iv-label="Password" />
-            <input iv-type="textarea" iv-label="Textarea" />
-            <input iv-type="spinner" iv-label="Spinner" />
-            <input iv-type="checkbox" iv-label="Checkbox" />
-            <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
-            <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
-            <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
-            <select iv-type="select" iv-label="Select">
-                <select iv-type="item" iv-value="1">option 1</select>
-                <select iv-type="item" iv-value="2">option 2</select>
-                <select iv-type="item" iv-value="3">option 3</select>
-                <select iv-type="item" iv-value="4">option 4</select>
-            </select>
-            <layout iv-type="spacer"></layout>
-            <layout iv-type="column" iv-size="12">
-                <button iv-type="submit" iv-label="Submit"></button>
-                <button iv-type="cancel" iv-label="Cancel"></button>
+            <layout iv-type="row">
+                <layout iv-type="column" iv-size="6">
+                    <input iv-type="text" iv-label="Text" />
+                    <input iv-type="file" iv-label="File" />
+                    <input iv-type="email" iv-label="Email" />
+                    <input iv-type="password" iv-label="Password" />
+                    <input iv-type="textarea" iv-label="Textarea" />
+                    <input iv-type="spinner" iv-label="Spinner" />
+                </layout>
+                <layout iv-type="column" iv-size="6">
+                    <input iv-type="checkbox" iv-label="Checkbox" />
+                    <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+                    <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+                    <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+                    <select iv-type="select" iv-label="Select">
+                        <select iv-type="item" iv-value="1">option 1</select>
+                        <select iv-type="item" iv-value="2">option 2</select>
+                        <select iv-type="item" iv-value="3">option 3</select>
+                        <select iv-type="item" iv-value="4">option 4</select>
+                    </select>
+                </layout>
+                <layout iv-type="spacer" iv-height="30px"></layout>
+                <layout iv-type="column" iv-size="12">
+                    <button iv-type="submit" iv-label="Submit"></button>
+                    <button iv-type="cancel" iv-label="Cancel"></button>
+                </layout>
             </layout>
-        </form>
+</form>
+
         <layout iv-type="spacer" iv-height="30px"></layout>
         <header iv-type="header">Icon</header>
         <icon iv-type="icon" iv-name="cloud"></icon>
