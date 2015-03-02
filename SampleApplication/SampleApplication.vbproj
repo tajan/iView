@@ -98,6 +98,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\lib\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\lib\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\lib\bootstrap\css\bootstrap.css" />
@@ -118,7 +119,6 @@
     <Content Include="Content\lib\bootstrap\js\bootstrap.min.js.map" />
     <None Include="iViewManifest.config" />
     <None Include="Content\lib\jquery\jquery-2.1.3.intellisense.js" />
-    <Content Include="iView\Default.html" />
     <Content Include="iView\kitchensink.html" />
     <Content Include="Content\lib\jquery\jquery-2.1.3.js" />
     <Content Include="Content\lib\jquery\jquery-2.1.3.min.js" />
@@ -135,12 +135,18 @@
     <Content Include="Template\Default\Controls\dropdown\dropdown.html" />
     <Content Include="Template\Default\Controls\dropdown\item.html" />
     <Content Include="Template\Default\Controls\form\form.html" />
+    <Content Include="Template\Default\Controls\grid\column.html" />
+    <Content Include="Template\Default\Controls\grid\grid.html" />
+    <Content Include="Template\Default\Controls\grid\header.html" />
+    <Content Include="Template\Default\Controls\grid\row.html" />
     <Content Include="Template\Default\Controls\header\header.html" />
     <Content Include="Template\Default\Controls\img\img.html" />
     <Content Include="Template\Default\Controls\input\base.html" />
+    <Content Include="Template\Default\Controls\input\checkbox.html" />
     <Content Include="Template\Default\Controls\input\email.html" />
     <Content Include="Template\Default\Controls\input\file.html" />
     <Content Include="Template\Default\Controls\input\password.html" />
+    <Content Include="Template\Default\Controls\input\radio.html" />
     <Content Include="Template\Default\Controls\input\spinner.html" />
     <Content Include="Template\Default\Controls\input\text.html" />
     <Content Include="Template\Default\Controls\input\textarea.html" />

@@ -20,7 +20,6 @@
                 </carousel>
             </carousel>
         </carousel>
-
         <header iv-type="header">Form</header>
         <form iv-type="form">
             <input iv-type="text" iv-label="Text" />
@@ -29,6 +28,10 @@
             <input iv-type="password" iv-label="Password" />
             <input iv-type="textarea" iv-label="Textarea" />
             <input iv-type="spinner" iv-label="Spinner" />
+            <input iv-type="checkbox" iv-label="Checkbox" />
+            <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+            <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+            <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
             <select iv-type="select" iv-label="Select">
                 <select iv-type="item" iv-value="1">option 1</select>
                 <select iv-type="item" iv-value="2">option 2</select>
@@ -54,9 +57,13 @@
         <icon iv-type="icon" iv-name="tent"></icon>
         <icon iv-type="icon" iv-name="apple"></icon>
         <header iv-type="header">Button </header>
+        <button iv-type="default"></button>
+        <button iv-type="default" iv-label="View label 2"></button>
+        <button iv-type="default" iv-label="View label 3"></button>
+        <button iv-type="default" iv-label="View label 4"></button>
+        <br />
         <button iv-type="submit" iv-label="Submit"></button>
         <button iv-type="cancel" iv-label="Cancel"></button>
-        <button iv-type="default" iv-label="Default"></button>
         <br />
         <button iv-type="group">
             <button iv-type="submit" iv-label="Submit"></button>
@@ -125,6 +132,53 @@
             <list iv-type="item">list item 3</list>
             <list iv-type="item">list item 4</list>
         </list>
+        <header iv-type="header">Grid</header>
+        <grid iv-type="grid">
+            <grid iv-type="row">
+                <grid iv-type="header">
+                    Column 1
+                </grid>
+                <grid iv-type="header">
+                    Column 3
+                </grid>
+                <grid iv-type="header">
+                    Column 3
+                </grid>
+            </grid>
+            <grid iv-type="row">
+                <grid iv-type="column">
+                    Column 1
+                </grid>
+                <grid iv-type="column">
+                    Column 3
+                </grid>
+                <grid iv-type="column">
+                    Column 3
+                </grid>
+            </grid>
+            <grid iv-type="row">
+                <grid iv-type="column">
+                    Column 1
+                </grid>
+                <grid iv-type="column">
+                    Column 3
+                </grid>
+                <grid iv-type="column">
+                    Column 3
+                </grid>
+            </grid>
+            <grid iv-type="row">
+                <grid iv-type="column">
+                    Column 1
+                </grid>
+                <grid iv-type="column">
+                    Column 3
+                </grid>
+                <grid iv-type="column">
+                    Column 3
+                </grid>
+            </grid>
+        </grid>
         <layout iv-type="spacer" iv-height="100px" iv-href="#"></layout>
         <layout iv-type="spacer" iv-height="100px" iv-href="#"></layout>
     </content>
