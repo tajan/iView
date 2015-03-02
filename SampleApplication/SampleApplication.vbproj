@@ -132,6 +132,8 @@
     <Content Include="Template\Default\Controls\carousel\caption.html" />
     <Content Include="Template\Default\Controls\carousel\carousel.html" />
     <Content Include="Template\Default\Controls\carousel\item.html" />
+    <Content Include="Template\Default\Controls\checkbox\checkbox.html" />
+    <Content Include="Template\Default\Controls\checkbox\radio.html" />
     <Content Include="Template\Default\Controls\dropdown\dropdown.html" />
     <Content Include="Template\Default\Controls\dropdown\item.html" />
     <Content Include="Template\Default\Controls\form\form.html" />
@@ -142,7 +144,7 @@
     <Content Include="Template\Default\Controls\header\header.html" />
     <Content Include="Template\Default\Controls\img\img.html" />
     <Content Include="Template\Default\Controls\input\base.html" />
-    <Content Include="Template\Default\Controls\input\checkbox.html" />
+    <Content Include="Template\Default\Controls\input\datetime.html" />
     <Content Include="Template\Default\Controls\input\email.html" />
     <Content Include="Template\Default\Controls\input\file.html" />
     <Content Include="Template\Default\Controls\input\password.html" />

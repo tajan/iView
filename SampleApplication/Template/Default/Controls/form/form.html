@@ -8,10 +8,11 @@
          iv-update-action="byid"
          iv-form-name="$iv-name"
          iv-single-submit="false"
+         iv-layout=""
          iv-filtering-form="false">
     <div class="form-container">
         <h3 class="panel-title">$iv-title</h3>
-        <form name="$iv-name" novalidate>
+        <form name="$iv-name" class="form-$iv-layout">
             <iv-content>
             </iv-content>
         </form>
