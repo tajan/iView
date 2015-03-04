@@ -119,10 +119,11 @@
     <Content Include="Content\lib\bootstrap\js\bootstrap.min.js.map" />
     <None Include="iViewManifest.config" />
     <None Include="Content\lib\jquery\jquery-2.1.3.intellisense.js" />
-    <Content Include="iView\kitchensink.html" />
+    <Content Include="iView\kitchensink\kitchensink.html" />
     <Content Include="Content\lib\jquery\jquery-2.1.3.js" />
     <Content Include="Content\lib\jquery\jquery-2.1.3.min.js" />
-    <Content Include="iView\nav.html" />
+    <Content Include="iView\kitchensink\nav.html" />
+    <Content Include="iView\test\test.html" />
     <Content Include="Template\Default\Controls\affix\affix.html" />
     <Content Include="Template\Default\Controls\alert\alert.html" />
     <Content Include="Template\Default\Controls\badge\badge.html" />

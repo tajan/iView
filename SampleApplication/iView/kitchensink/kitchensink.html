@@ -5,7 +5,7 @@
     <content>
         <affix iv-type="affix" iv-right="0px">
             <header iv-type="section">Affix</header>
-            <include iv-source="/iview/nav.html"></include>
+            <include iv-source="/iview/kitchensink/nav.html"></include>
         </affix>
 
         <!-- Carousel -->
@@ -145,10 +145,24 @@
         <!---------------------------------------------------------------------------------->
         <header iv-id="Alert" iv-type="page">Alert</header>
         <panel iv-type="panel">
+            <header iv-type="section">Alert</header>
             <alert iv-type="alert">This is alert and nothing else matters.</alert>
             <alert iv-type="alert" iv-kind="info">This is alert and nothing else matters.</alert>
             <alert iv-type="alert" iv-kind="warning">This is alert and nothing else matters.</alert>
             <alert iv-type="alert" iv-kind="danger">This is alert and nothing else matters.</alert>
+            <header iv-type="section">Dismissible</header>
+            <alert iv-type="alert" iv-dismissible="dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                This is alert and nothing else matters.
+            </alert>
+            <alert iv-type="alert" iv-dismissible="dismissible" iv-kind="info">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                This is alert and nothing else matters.
+            </alert>
         </panel>
         <!-- Dropdown -->
         <!---------------------------------------------------------------------------------->
