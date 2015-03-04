@@ -1,0 +1,14 @@
+﻿<control>
+    <ul class="nav nav-tabs" role="tablist" id="myTab">
+        <iv-content></iv-content>
+    </ul>
+    <script>
+        $(function () {
+            if ($('#myTab a.active').length > 0) {
+                $('#myTab a.active').tab('show')
+            } else {
+                $('#myTab a:first').tab('show')
+            }
+        })
+    </script>
+</control>

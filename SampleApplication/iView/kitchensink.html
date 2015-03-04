@@ -3,7 +3,14 @@
         KitchenSink
     </pagetitle>
     <content>
-        <header iv-type="header">Carousel</header>
+        <affix iv-type="affix" iv-right="0px">
+            <header iv-type="section">Affix</header>
+            <include iv-source="/iview/nav.html"></include>
+        </affix>
+
+        <!-- Carousel -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Carousel" iv-type="page">Carousel</header>
         <carousel iv-type="carousel">
             <carousel iv-type="item" iv-active="active">
                 <img data-src="holder.js/900x500/auto/#666:#666" alt="900x500" src="http://placehold.it/1200x350" data-holder-rendered="true">
@@ -20,175 +27,289 @@
                 </carousel>
             </carousel>
         </carousel>
-        <header iv-type="header">Form</header>
-        <form iv-type="form">
-            <layout iv-type="row">
-                <layout iv-type="column" iv-size="6">
-                    <input iv-type="text" iv-label="Text" />
-                    <input iv-type="file" iv-label="File" />
-                    <input iv-type="email" iv-label="Email" />
-                    <input iv-type="password" iv-label="Password" />
-                    <input iv-type="textarea" iv-label="Textarea" />
-                    <input iv-type="spinner" iv-label="Spinner" />
+        <!-- Form -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Form" iv-type="page">Form</header>
+        <panel iv-type="panel">
+            <form iv-type="form">
+                <layout iv-type="row">
+                    <layout iv-type="column" iv-size="6">
+                        <input iv-type="text" iv-label="Text" />
+                        <input iv-type="file" iv-label="File" />
+                        <input iv-type="email" iv-label="Email" />
+                        <input iv-type="password" iv-label="Password" />
+                        <input iv-type="textarea" iv-label="Textarea" />
+                        <input iv-type="spinner" iv-label="Spinner" />
+                    </layout>
+                    <layout iv-type="column" iv-size="6">
+                        <input iv-type="checkbox" iv-label="Checkbox" />
+                        <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+                        <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+                        <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
+                        <checkbox iv-type="checkbox" iv-label="Checkbox"></checkbox>
+                        <checkbox iv-type="radio" iv-label="Radio 1" iv-name="radioList"></checkbox>
+                        <checkbox iv-type="radio" iv-label="Radio 2" iv-name="radioList"></checkbox>
+                        <checkbox iv-type="radio" iv-label="Radio 3" iv-name="radioList"></checkbox>
+                        <select iv-type="select" iv-label="Select">
+                            <select iv-type="item" iv-value="1">option 1</select>
+                            <select iv-type="item" iv-value="2">option 2</select>
+                            <select iv-type="item" iv-value="3">option 3</select>
+                            <select iv-type="item" iv-value="4">option 4</select>
+                        </select>
+                    </layout>
+                    <layout iv-type="spacer" iv-height="30px"></layout>
+                    <layout iv-type="column" iv-size="12">
+                        <button iv-type="submit" iv-label="Submit"></button>
+                        <button iv-type="cancel" iv-label="Cancel"></button>
+                    </layout>
                 </layout>
-                <layout iv-type="column" iv-size="6">
-                    <input iv-type="checkbox" iv-label="Checkbox" />
-                    <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
-                    <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
-                    <input iv-type="radio" iv-label="Radio" iv-name="testradio" />
-                    <checkbox iv-type="checkbox" iv-label="Checkbox"></checkbox>
-                    <checkbox iv-type="radio" iv-label="Radio 1" iv-name="radioList"></checkbox>
-                    <checkbox iv-type="radio" iv-label="Radio 2" iv-name="radioList"></checkbox>
-                    <checkbox iv-type="radio" iv-label="Radio 3" iv-name="radioList"></checkbox>
-                    <select iv-type="select" iv-label="Select">
-                        <select iv-type="item" iv-value="1">option 1</select>
-                        <select iv-type="item" iv-value="2">option 2</select>
-                        <select iv-type="item" iv-value="3">option 3</select>
-                        <select iv-type="item" iv-value="4">option 4</select>
-                    </select>
-                </layout>
-                <layout iv-type="spacer" iv-height="30px"></layout>
-                <layout iv-type="column" iv-size="12">
-                    <button iv-type="submit" iv-label="Submit"></button>
-                    <button iv-type="cancel" iv-label="Cancel"></button>
-                </layout>
-            </layout>
-        </form>
+            </form>
+        </panel>
         <layout iv-type="spacer" iv-height="30px"></layout>
-        <header iv-type="header">Icon</header>
-        <icon iv-type="icon" iv-name="cloud"></icon>
-        <icon iv-type="icon" iv-name="log-in"></icon>
-        <icon iv-type="icon" iv-name="credit-card"></icon>
-        <icon iv-type="icon" iv-name="tower"></icon>
-        <icon iv-type="icon" iv-name="phone-alt"></icon>
-        <icon iv-type="icon" iv-name="send"></icon>
-        <icon iv-type="icon" iv-name="paperclip"></icon>
-        <icon iv-type="icon" iv-name="open"></icon>
-        <icon iv-type="icon" iv-name="tent"></icon>
-        <icon iv-type="icon" iv-name="apple"></icon>
-        <header iv-type="header">Button </header>
-        <button iv-type="default"></button>
-        <button iv-type="default" iv-label="View label 2"></button>
-        <button iv-type="default" iv-label="View label 3"></button>
-        <button iv-type="default" iv-label="View label 4"></button>
-        <br />
-        <button iv-type="submit" iv-label="Submit"></button>
-        <button iv-type="cancel" iv-label="Cancel"></button>
-        <br />
-        <button iv-type="group">
+        <!-- Icon -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Icon" iv-type="page">Icon</header>
+        <panel iv-type="panel">
+            <icon iv-type="icon" iv-name="cloud"></icon>
+            <icon iv-type="icon" iv-name="log-in"></icon>
+            <icon iv-type="icon" iv-name="credit-card"></icon>
+            <icon iv-type="icon" iv-name="tower"></icon>
+            <icon iv-type="icon" iv-name="phone-alt"></icon>
+            <icon iv-type="icon" iv-name="send"></icon>
+            <icon iv-type="icon" iv-name="paperclip"></icon>
+            <icon iv-type="icon" iv-name="open"></icon>
+            <icon iv-type="icon" iv-name="tent"></icon>
+            <icon iv-type="icon" iv-name="apple"></icon>
+        </panel>
+        <!-- Button -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Button" iv-type="page">Button </header>
+        <panel iv-type="panel">
+            <button iv-type="default"></button>
+            <button iv-type="default" iv-label="View label 2"></button>
+            <button iv-type="default" iv-label="View label 3"></button>
+            <button iv-type="default" iv-label="View label 4"></button>
+            <header iv-type="section">Form</header>
             <button iv-type="submit" iv-label="Submit"></button>
             <button iv-type="cancel" iv-label="Cancel"></button>
+            <header iv-type="section">Group</header>
+            <button iv-type="group">
+                <button iv-type="submit" iv-label="Submit"></button>
+                <button iv-type="cancel" iv-label="Cancel"></button>
+            </button>
+            <header iv-type="section">Kind</header>
+            <button iv-type="default" iv-label="Default"></button>
+            <button iv-type="default" iv-label="Primary" iv-kind="primary"></button>
             <button iv-type="default" iv-label="Success" iv-kind="success"></button>
             <button iv-type="default" iv-label="Danger" iv-kind="danger"></button>
             <button iv-type="default" iv-label="Info" iv-kind="info"></button>
             <button iv-type="default" iv-label="Warning" iv-kind="warning"></button>
-        </button>
-        <br />
-        <button iv-type="default" iv-size="lg" iv-label="Default"></button>
-        <button iv-type="default" iv-label="Default"></button>
-        <button iv-type="default" iv-size="sm" iv-label="Default"></button>
-        <button iv-type="default" iv-size="xs" iv-label="Default"></button>
-        <br />
-        <button iv-type="default" iv-size="xs" iv-label="Default">
-            <badge iv-type="badge">3</badge>
-        </button>
-        <button iv-type="default" iv-size="xs" iv-kind="success" iv-label="Default">
-            <badge iv-type="badge">3</badge>
-        </button>
-        <header iv-type="header">Image</header>
-        <img iv-type="img" iv-src="http://placehold.it/150x150" />
-        <img iv-type="img" iv-kind="circle" iv-src="http://placehold.it/150x150" />
-        <img iv-type="img" iv-kind="thumbnail" iv-src="http://placehold.it/150x150" />
-        <header iv-type="header">Label</header>
-        <h5>
-            Example heading
-            <label iv-type="label" iv-kind="default">New</label>
-            <label iv-type="label" iv-kind="primary">New</label>
-            <label iv-type="label" iv-kind="success">New</label>
-            <label iv-type="label" iv-kind="info">New</label>
-            <label iv-type="label" iv-kind="warning">New</label>
-            <label iv-type="label" iv-kind="danger">New</label>
-        </h5>
-        <header iv-type="header">Alert</header>
-        <alert iv-type="alert">This is alert and nothing else matters.</alert>
-        <alert iv-type="alert" iv-kind="info">This is alert and nothing else matters.</alert>
-        <alert iv-type="alert" iv-kind="warning">This is alert and nothing else matters.</alert>
-        <alert iv-type="alert" iv-kind="danger">This is alert and nothing else matters.</alert>
-        <header iv-type="header">Dropdown</header>
-        <dropdown iv-type="dropdown" iv-label="Dropdown">
-            <dropdown iv-type="item" iv-label="Option 1"></dropdown>
-            <dropdown iv-type="item" iv-label="Option 2"></dropdown>
-            <dropdown iv-type="item" iv-label="Option 3"></dropdown>
-            <dropdown iv-type="item" iv-label="Option 4"></dropdown>
-        </dropdown>
-        <header iv-type="header">Panel</header>
+            <header iv-type="section">Size</header>
+            <button iv-type="default" iv-kind="success" iv-size="lg" iv-label="Default"></button>
+            <button iv-type="default" iv-kind="success" iv-label="default"></button>
+            <button iv-type="default" iv-kind="success" iv-size="sm" iv-label="Default"></button>
+            <button iv-type="default" iv-kind="success" iv-size="xs" iv-label="Default"></button>
+            <header iv-type="section">Badge</header>
+
+            <button iv-type="default" iv-size="xs" iv-label="Default">
+                <badge iv-type="badge">3</badge>
+            </button>
+            <button iv-type="default" iv-size="xs" iv-kind="success" iv-label="Default">
+                <badge iv-type="badge">3</badge>
+            </button>
+        </panel>
+        <!-- Image -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Image" iv-type="page">Image</header>
+
+        <panel iv-type="panel">
+            <img iv-type="img" iv-src="http://placehold.it/150x150" />
+            <img iv-type="img" iv-kind="circle" iv-src="http://placehold.it/150x150" />
+            <img iv-type="img" iv-kind="thumbnail" iv-src="http://placehold.it/150x150" />
+        </panel>
+        <!-- Label -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-type="page">Label</header>
+        <panel iv-type="panel">
+            <h5>
+                Example heading
+                <label iv-type="label" iv-kind="default">New</label>
+                <label iv-type="label" iv-kind="primary">New</label>
+                <label iv-type="label" iv-kind="success">New</label>
+                <label iv-type="label" iv-kind="info">New</label>
+                <label iv-type="label" iv-kind="warning">New</label>
+                <label iv-type="label" iv-kind="danger">New</label>
+            </h5>
+        </panel>
+        <!-- Alert -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Alert" iv-type="page">Alert</header>
+        <panel iv-type="panel">
+            <alert iv-type="alert">This is alert and nothing else matters.</alert>
+            <alert iv-type="alert" iv-kind="info">This is alert and nothing else matters.</alert>
+            <alert iv-type="alert" iv-kind="warning">This is alert and nothing else matters.</alert>
+            <alert iv-type="alert" iv-kind="danger">This is alert and nothing else matters.</alert>
+        </panel>
+        <!-- Dropdown -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-type="page">Dropdown</header>
+        <panel iv-type="panel">
+            <dropdown iv-type="dropdown" iv-label="Dropdown">
+                <dropdown iv-type="item" iv-label="Option 1"></dropdown>
+                <dropdown iv-type="item" iv-label="Option 2"></dropdown>
+                <dropdown iv-type="item" iv-label="Option 3"></dropdown>
+                <dropdown iv-type="item" iv-label="Option 4"></dropdown>
+            </dropdown>
+        </panel>
+        <!-- Panel -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Panel" iv-type="page">Panel</header>
         <panel iv-type="panel">
             <iv-header>Panel Herader</iv-header>
             <iv-body>Body</iv-body>
             <iv-footer>Footer Text</iv-footer>
         </panel>
-        <header iv-type="header">jumbotron</header>
+        <!-- Jumbotron -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Jumbotron" iv-type="page">Jumbotron</header>
         <layout iv-type="jumbotron">
             <h2>This is title<label iv-type="label" iv-kind="danger">New</label></h2>
             <p>Augue in nec tortor sed hac, amet, urna dis eros quis habitasse dictumst turpis adipiscing a amet, sit.</p>
             <button iv-type="default" iv-label="Default"></button>
         </layout>
-        <header iv-type="header">List group</header>
-        <list iv-type="list">
-            <list iv-type="item">
-                list item 1 <label iv-type="label" iv-kind="success">New</label>
+        <!-- List group -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Listgroup" iv-type="page">List group</header>
+        <panel iv-type="panel">
+            <list iv-type="list">
+                <list iv-type="item">
+                    list item 1 <label iv-type="label" iv-kind="success">New</label>
+                </list>
+                <list iv-type="item">list item 2</list>
+                <list iv-type="item">list item 3</list>
+                <list iv-type="item">list item 4</list>
             </list>
-            <list iv-type="item">list item 2</list>
-            <list iv-type="item">list item 3</list>
-            <list iv-type="item">list item 4</list>
-        </list>
-        <header iv-type="header">Grid</header>
-        <grid iv-type="grid">
-            <grid iv-type="row">
-                <grid iv-type="header">
-                    Column 1
+        </panel>
+        <!-- Grid -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Grid" iv-type="page">Grid</header>
+        <panel iv-type="panel">
+            <grid iv-type="grid">
+                <grid iv-type="row">
+                    <grid iv-type="header">
+                        Column 1
+                    </grid>
+                    <grid iv-type="header">
+                        Column 3
+                    </grid>
+                    <grid iv-type="header">
+                        Column 3
+                    </grid>
                 </grid>
-                <grid iv-type="header">
-                    Column 3
+                <grid iv-type="row">
+                    <grid iv-type="column">
+                        Column 1
+                    </grid>
+                    <grid iv-type="column">
+                        Column 3
+                    </grid>
+                    <grid iv-type="column">
+                        Column 3
+                    </grid>
                 </grid>
-                <grid iv-type="header">
-                    Column 3
+                <grid iv-type="row">
+                    <grid iv-type="column">
+                        Column 1
+                    </grid>
+                    <grid iv-type="column">
+                        Column 3
+                    </grid>
+                    <grid iv-type="column">
+                        Column 3
+                    </grid>
+                </grid>
+                <grid iv-type="row">
+                    <grid iv-type="column">
+                        Column 1
+                    </grid>
+                    <grid iv-type="column">
+                        Column 3
+                    </grid>
+                    <grid iv-type="column">
+                        Column 3
+                    </grid>
                 </grid>
             </grid>
-            <grid iv-type="row">
-                <grid iv-type="column">
-                    Column 1
-                </grid>
-                <grid iv-type="column">
-                    Column 3
-                </grid>
-                <grid iv-type="column">
-                    Column 3
-                </grid>
-            </grid>
-            <grid iv-type="row">
-                <grid iv-type="column">
-                    Column 1
-                </grid>
-                <grid iv-type="column">
-                    Column 3
-                </grid>
-                <grid iv-type="column">
-                    Column 3
-                </grid>
-            </grid>
-            <grid iv-type="row">
-                <grid iv-type="column">
-                    Column 1
-                </grid>
-                <grid iv-type="column">
-                    Column 3
-                </grid>
-                <grid iv-type="column">
-                    Column 3
-                </grid>
-            </grid>
-        </grid>
+        </panel>
+        <!-- Breadcrumbs -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Breadcrumbs" iv-type="page">Breadcrumbs</header>
+        <breadcrumbs iv-type="breadcrumbs">
+            <breadcrumbs iv-type="item" iv-href="#/1">1</breadcrumbs>
+            <breadcrumbs iv-type="item" iv-href="#/2">2</breadcrumbs>
+            <breadcrumbs iv-type="item" iv-active="active">3</breadcrumbs>
+        </breadcrumbs>
+        <!-- Paging -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Paging" iv-type="page">Paging</header>
+        <paging iv-type="paging">
+            <paging iv-type="item" iv-href="#/1">1</paging>
+            <paging iv-type="item" iv-href="#/2">2</paging>
+            <paging iv-type="item" iv-href="#/3">3</paging>
+        </paging>
+        <!-- Tab -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Tab" iv-type="page">Tab</header>
+        <panel iv-type="panel">
+            <tab iv-type="tab">
+                <tab iv-type="header">
+                    <tab iv-type="head" iv-id="Tab1" iv-label="Tab1"></tab>
+                    <tab iv-type="head" iv-id="Tab2" iv-label="Tab2" iv-active="active"></tab>
+                    <tab iv-type="head" iv-id="Tab3" iv-label="Tab3"></tab>
+                    <tab iv-type="head" iv-id="Tab4" iv-label="Tab4"></tab>
+                </tab>
+                <tab iv-type="content">
+                    <tab iv-type="item" iv-id="Tab1">
+                        <header iv-type="section">Tab 1</header>
+                        <lorem iv-type="lorem"></lorem>
+                    </tab>
+                    <tab iv-type="item" iv-id="Tab2">
+                        <header iv-type="section">Tab 2</header>
+                        <lorem iv-type="lorem"></lorem>
+                    </tab>
+                    <tab iv-type="item" iv-id="Tab3">
+                        <header iv-type="section">Tab 3</header>
+                        <lorem iv-type="lorem"></lorem>
+                    </tab>
+                    <tab iv-type="item" iv-id="Tab4">
+                        <header iv-type="section">Tab 4</header>
+                        <lorem iv-type="lorem"></lorem>
+                    </tab>
+                </tab>
+            </tab>
+        </panel>
+        <!-- Nav -->
+        <!---------------------------------------------------------------------------------->
+        <header iv-id="Nav" iv-type="page">Nav</header>
+        <nav iv-type="nav" iv-pills="pills">
+            <nav iv-type="item" iv-href="#Nav">Nav</nav>
+            <nav iv-type="item" iv-href="#Carousel">Carousel</nav>
+            <nav iv-type="item" iv-href="#Form">Form</nav>
+            <nav iv-type="item" iv-href="#Icon">Icon</nav>
+            <nav iv-type="item" iv-href="#Button">Button</nav>
+            <nav iv-type="item" iv-href="#Image">Image</nav>
+            <nav iv-type="item" iv-href="#Label">Label</nav>
+            <nav iv-type="item" iv-href="#Alert">Alert</nav>
+            <nav iv-type="item" iv-href="#Dropdown">Dropdown</nav>
+            <nav iv-type="item" iv-href="#Panel">Panel</nav>
+            <nav iv-type="item" iv-href="#Jumbotron">Jumbotron</nav>
+            <nav iv-type="item" iv-href="#Listgroup">Listgroup</nav>
+            <nav iv-type="item" iv-href="#Grid">Grid</nav>
+            <nav iv-type="item" iv-href="#Breadcrumbs">Breadcrumbs</nav>
+            <nav iv-type="item" iv-href="#Breadcrumbs">Paging</nav>
+            <nav iv-type="item" iv-href="#Breadcrumbs">Tab</nav>
+            <nav iv-type="item">TOP</nav>
+        </nav>
         <layout iv-type="spacer" iv-height="100px" iv-href="#"></layout>
         <layout iv-type="spacer" iv-height="100px" iv-href="#"></layout>
     </content>

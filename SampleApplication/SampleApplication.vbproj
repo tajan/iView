@@ -122,8 +122,12 @@
     <Content Include="iView\kitchensink.html" />
     <Content Include="Content\lib\jquery\jquery-2.1.3.js" />
     <Content Include="Content\lib\jquery\jquery-2.1.3.min.js" />
+    <Content Include="iView\nav.html" />
+    <Content Include="Template\Default\Controls\affix\affix.html" />
     <Content Include="Template\Default\Controls\alert\alert.html" />
     <Content Include="Template\Default\Controls\badge\badge.html" />
+    <Content Include="Template\Default\Controls\breadcrumbs\breadcrumbs.html" />
+    <Content Include="Template\Default\Controls\breadcrumbs\item.html" />
     <Content Include="Template\Default\Controls\button\base.html" />
     <Content Include="Template\Default\Controls\button\cancel.html" />
     <Content Include="Template\Default\Controls\button\default.html" />
@@ -141,7 +145,8 @@
     <Content Include="Template\Default\Controls\grid\grid.html" />
     <Content Include="Template\Default\Controls\grid\header.html" />
     <Content Include="Template\Default\Controls\grid\row.html" />
-    <Content Include="Template\Default\Controls\header\header.html" />
+    <Content Include="Template\Default\Controls\header\page.html" />
+    <Content Include="Template\Default\Controls\header\section.html" />
     <Content Include="Template\Default\Controls\img\img.html" />
     <Content Include="Template\Default\Controls\input\base.html" />
     <Content Include="Template\Default\Controls\input\datetime.html" />
@@ -159,12 +164,23 @@
     <Content Include="Template\Default\Controls\layout\spacer.html" />
     <Content Include="Template\Default\Controls\list\item.html" />
     <Content Include="Template\Default\Controls\list\list.html" />
+    <Content Include="Template\Default\Controls\lorem\lorem.html" />
+    <Content Include="Template\Default\Controls\nav\item.html" />
+    <Content Include="Template\Default\Controls\nav\nav.html" />
+    <Content Include="Template\Default\Controls\paging\item.html" />
+    <Content Include="Template\Default\Controls\paging\paging.html" />
     <Content Include="Template\Default\Controls\panel\panel.html" />
     <Content Include="Template\Default\Controls\select\item.html" />
     <Content Include="Template\Default\Controls\select\select.html" />
     <Content Include="Template\Default\Controls\icon\icon.html" />
+    <Content Include="Template\Default\Controls\tab\content.html" />
+    <Content Include="Template\Default\Controls\tab\head.html" />
+    <Content Include="Template\Default\Controls\tab\header.html" />
+    <Content Include="Template\Default\Controls\tab\item.html" />
+    <Content Include="Template\Default\Controls\tab\tab.html" />
     <Content Include="Template\Default\Layout\Default.html" />
     <Content Include="Template\Default\Layout\DefaultWithMenu.html" />
+    <Content Include="Template\Default\Layout\empty.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
