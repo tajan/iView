@@ -150,6 +150,7 @@
     <Content Include="Template\Default\Controls\header\section.html" />
     <Content Include="Template\Default\Controls\img\img.html" />
     <Content Include="Template\Default\Controls\input\base.html" />
+    <Content Include="Template\Default\Controls\input\checkbox.html" />
     <Content Include="Template\Default\Controls\input\datetime.html" />
     <Content Include="Template\Default\Controls\input\email.html" />
     <Content Include="Template\Default\Controls\input\file.html" />
