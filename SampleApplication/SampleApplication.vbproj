@@ -142,10 +142,10 @@
     <Content Include="Template\Default\Controls\dropdown\dropdown.html" />
     <Content Include="Template\Default\Controls\dropdown\item.html" />
     <Content Include="Template\Default\Controls\form\form.html" />
-    <Content Include="Template\Default\Controls\grid\column.html" />
+    <Content Include="Template\Default\Controls\gridcol\column.html" />
     <Content Include="Template\Default\Controls\grid\grid.html" />
-    <Content Include="Template\Default\Controls\grid\header.html" />
-    <Content Include="Template\Default\Controls\grid\row.html" />
+    <Content Include="Template\Default\Controls\gridcol\header.html" />
+    <Content Include="Template\Default\Controls\gridrow\row.html" />
     <Content Include="Template\Default\Controls\header\page.html" />
     <Content Include="Template\Default\Controls\header\section.html" />
     <Content Include="Template\Default\Controls\img\img.html" />
