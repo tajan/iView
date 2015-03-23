@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{48BD0AF7
 		Nuget\iView.1.0.3.nupkg = Nuget\iView.1.0.3.nupkg
 		Nuget\iView.1.0.4.nupkg = Nuget\iView.1.0.4.nupkg
 		Nuget\iView.1.0.5.nupkg = Nuget\iView.1.0.5.nupkg
+		Nuget\iView.1.0.6.nupkg = Nuget\iView.1.0.6.nupkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{9D47E8F6-98F0-4D44-AB2C-927212E1FE40}"

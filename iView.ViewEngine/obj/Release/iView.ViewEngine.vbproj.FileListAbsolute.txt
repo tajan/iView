@@ -26,3 +26,4 @@ C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Release\iView.ViewEn
 C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Release\iView.ViewEngine.dll
 C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Release\iView.ViewEngine.xml
 C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Release\iView.ViewEngine.pdb
+C:\Users\a.pournasserian\Desktop\iView\iView.ViewEngine\obj\Release\iView.ViewEngine.vbprojResolveAssemblyReference.cache
