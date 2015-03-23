@@ -129,7 +129,7 @@
     <Content Include="Template\Default\Controls\badge\badge.html" />
     <Content Include="Template\Default\Controls\breadcrumbs\breadcrumbs.html" />
     <Content Include="Template\Default\Controls\breadcrumbs\item.html" />
-    <Content Include="Template\Default\Controls\button\base.html" />
+    <Content Include="Template\Default\Controls\button\baseinput\base.html" />
     <Content Include="Template\Default\Controls\button\cancel.html" />
     <Content Include="Template\Default\Controls\button\default.html" />
     <Content Include="Template\Default\Controls\button\group.html" />

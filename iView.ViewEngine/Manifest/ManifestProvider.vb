@@ -136,7 +136,7 @@ Public Class ManifestProvider
         Dim rootPath As String = controlNode.GetAttributeValue(manifest.ControlRootAttributeName, manifest.Control.RootPath)
         Dim themeName As String = controlNode.GetAttributeValue(manifest.ControlThemeAttributeName, manifest.Control.ThemeName)
         Dim controlsPath As String = controlNode.GetAttributeValue(manifest.ControlPathAttributeName, manifest.Control.ControlsPath)
-        Dim controlPath As String = controlNode.Name
+        Dim controlPath As String = controlNode.Name.Replace(":", "\")
         Dim controlFileName As String = controlNode.Attributes(manifest.ControlTypeAttributeName).Value & manifest.ControlFileExtension
 
         Return rootPath & "/" & themeName & "/" & controlsPath & "/" & controlPath & "/" & controlFileName
